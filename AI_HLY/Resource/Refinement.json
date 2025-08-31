@@ -1,0 +1,246 @@
+{
+  "zh-Hans": [
+    {
+      "name": "📄 书面文体",
+      "type": "content",
+      "prompt": "使用书面化的表达方式，保持逻辑严谨，结构清晰，适合商务公文、政府文件等正式场景。"
+    },
+    {
+      "name": "📺 通俗表达",
+      "type": "content",
+      "prompt": "使用通俗化的表达方式，使得文本更加通俗易懂，适当的使用比喻，类比等手法，适合日常交流场景。"
+    },
+    {
+      "name": "😆 趣味表达",
+      "type": "content",
+      "prompt": "将文本改编为幽默风趣的表达，适当加入谐音梗、流行网络用语，保持轻松活泼的语调。"
+    },
+    {
+      "name": "🛍️ 电商文案",
+      "type": "content",
+      "prompt": "将文本优化为促销文案，突出产品卖点，使用紧迫感话术（限时/限量），包含价格锚点，适合电商平台。"
+    },
+    {
+      "name": "🙏 礼仪措辞",
+      "type": "content",
+      "prompt": "将文本转换为礼貌得体的表达，使用敬语称谓（您/贵司），避免直接否定，采用建议性表述，适合沟通场景。"
+    },
+    {
+      "name": "📖 故事改编",
+      "type": "content",
+      "prompt": "增强文本故事性，添加人物对话描写，设置情节冲突，运用五感描写，创造沉浸式阅读体验。"
+    },
+    {
+      "name": "💬 朋友圈文案",
+      "type": "content",
+      "prompt": "将文本优化为微信朋友圈内容风格，口语化表达，适当添加表情符号，包含互动话术（求建议/点赞），展示生活化场景。"
+    },
+    {
+      "name": "🔖 小红书种草",
+      "type": "content",
+      "prompt": "将文本转换为小红书风格文案，使用亲切称呼，添加相关话题标签，突出使用场景体验，适当加入emoji点缀。"
+    },
+    {
+      "name": "😂 Emoji文",
+      "type": "content",
+      "prompt": "将文本全部转换为emoji表情，无需保留文字，通过相关emoji组合准确传达原文含义，保持可理解性。"
+    },
+    {
+      "name": "🎂 祝福定制",
+      "type": "content",
+      "prompt": "优化现有的祝福，根据不同场景（生日/入职/节日），优化祝福词汇，使用善意和祝福的语气。"
+    },
+    {
+      "name": "🔥 标题党",
+      "type": "content",
+      "prompt": "打造爆款标题。使用「惊叹号❗️+痛点提问+数字悬念」结构（如『月薪3k→3w❗️你忽略了这3个能力？』）。"
+    },
+    {
+      "name": "📝 简历精修",
+      "type": "content",
+      "prompt": "优化简历内容表述。采用「动词+量化成果」结构（如'主导XX系统开发，降低错误率25%'），删除冗余描述。"
+    },
+    {
+      "name": "📨 邮件格式",
+      "type": "format",
+      "prompt": "按标准邮件格式调整。优化表达方式，要素包含：称谓、正文分段、敬语结尾、联系信息、日期。要求语气专业正式。"
+    },
+    {
+      "name": "📰 新闻通稿",
+      "type": "format",
+      "prompt": "按新闻稿格式改写。采用倒金字塔结构：导语包含5W1H要素，正文补充细节，结尾添加背景信息。保持客观中立。"
+    },
+    {
+      "name": "📌 阅读指引",
+      "type": "format",
+      "prompt": "为文本添加阅读指引，为超过3行的文本添加小标题，关键论点用⭐️标记，专业术语添加脚注解释。"
+    },
+    {
+      "name": "🎤 演讲致辞",
+      "type": "format",
+      "prompt": "请按演讲稿格式调整，包含：开场问候、故事案例、金句强调、互动提问、总结升华。要求口语化且有感染力。"
+    },
+    {
+      "name": "🗂️ 信息分层",
+      "type": "format",
+      "prompt": "建立内容层级。使用markdown格式，为分层内容添加小标题等，使得内容结构清晰，格式规范。"
+    },
+    {
+      "name": "💡 知识卡片",
+      "type": "format",
+      "prompt": "结合内容制作用户友好型知识卡片。采用「问题→答案→应用场景」结构，使用markdown格式，关键术语加粗。"
+    },
+    {
+      "name": "💬 对话形式",
+      "type": "format",
+      "prompt": "将内容转换为对话的Q&A形式。要求：每段以「Q:」「A:」开头，符合对话的语境表达。"
+    },
+    {
+      "name": "🛒 商品评价",
+      "type": "format",
+      "prompt": "转换为电商评价的格式。要求：突出使用体验，包含质量/效果对比，添加「推荐给...人群」的结论。"
+    },
+    {
+      "name": "📝 会议纪要",
+      "type": "format",
+      "prompt": "按会议模板整理。包含：时间地点-参会人员-决议事项-待办任务（负责人+DDL），关键结论用方框标注。"
+    },
+    {
+      "name": "📈 内容扩写",
+      "type": "length",
+      "prompt": "请对文本进行扩展补充。要求：在关键论点处添加统计数据、案例佐证、专家观点等支撑材料，保持原意不变的情况下增加30%内容。"
+    },
+    {
+      "name": "✂️ 精简内容",
+      "type": "length",
+      "prompt": "请对文本进行精简压缩。要求：删除重复表述和非核心信息，使用更简洁的表达方式，保留100%核心信息的前提下缩减40%字数。"
+    },
+    {
+      "name": "📏 原长优化",
+      "type": "length",
+      "prompt": "保持现有篇幅，通过调整句式结构、替换高级词汇、优化信息密度来实现提升，字数与原文保持相当。"
+    }
+  ],
+  "en": [
+    {
+      "name": "📄 Formal",
+      "type": "content",
+      "prompt": "Use a formal writing style that maintains rigorous logic and clear structure, suitable for business documents and official government communications."
+    },
+    {
+      "name": "📺 Casual",
+      "type": "content",
+      "prompt": "Use a more colloquial expression to make the text easy to understand, with appropriate use of analogies and comparisons, suitable for everyday communication."
+    },
+    {
+      "name": "😆 Humorous",
+      "type": "content",
+      "prompt": "Adapt the text into a humorous and witty style, incorporating puns and popular internet slang, while keeping a light and lively tone."
+    },
+    {
+      "name": "🛍️ E-commerce",
+      "type": "content",
+      "prompt": "Optimize the text as promotional copy by highlighting product features, using urgent language (limited time/quantity), and including price anchoring, suitable for e-commerce platforms."
+    },
+    {
+      "name": "🙏 Polite",
+      "type": "content",
+      "prompt": "Convert the text into a polite and appropriate expression using respectful titles (e.g., you/your company), avoiding direct negation and adopting suggestive language, suitable for formal communications."
+    },
+    {
+      "name": "📖 Story",
+      "type": "content",
+      "prompt": "Enhance the narrative quality of the text by adding dialogue, setting up conflicts, and using sensory descriptions to create an immersive reading experience."
+    },
+    {
+      "name": "💬 WeChat",
+      "type": "content",
+      "prompt": "Optimize the text in the style of social media posts (e.g., WeChat Moments), using conversational language, adding emojis, and including interactive language (e.g., asking for suggestions/likes) to showcase a personal lifestyle."
+    },
+    {
+      "name": "🔖 Rednote",
+      "type": "content",
+      "prompt": "Transform the text into the style typical of Xiaohongshu posts, using friendly terms of address, adding relevant hashtags, and emphasizing user experience with appropriate emoji embellishments."
+    },
+    {
+      "name": "😂 Emoji",
+      "type": "content",
+      "prompt": "Convert the entire text into a sequence of emojis without retaining any words, using relevant emoji combinations to accurately convey the original meaning while maintaining understandability."
+    },
+    {
+      "name": "🎂 Greetings",
+      "type": "content",
+      "prompt": "Optimize existing greetings based on different scenarios (e.g., birthday, onboarding, holidays) using kind and congratulatory language."
+    },
+    {
+      "name": "🔥 Clickbait",
+      "type": "content",
+      "prompt": "Create a catchy headline using an exclamation mark, pain-point questions, and numerical suspense (e.g., '3k to 30k! Did you miss these 3 skills?')."
+    },
+    {
+      "name": "📝 Resume",
+      "type": "content",
+      "prompt": "Optimize resume content by adopting a structure of 'verb + quantifiable results' (e.g., 'Led the development of XX system, reducing error rate by 25%') and removing redundant descriptions."
+    },
+    {
+      "name": "📨 Email",
+      "type": "format",
+      "prompt": "Adjust the text to conform to standard email format. Optimize the expression to include: salutation, paragraph separation, formal closing, contact information, and date. A professional and formal tone is required."
+    },
+    {
+      "name": "📰 Press",
+      "type": "format",
+      "prompt": "Rewrite the text in the format of a press release using an inverted pyramid structure: the lead should include the 5Ws and 1H, followed by supporting details and background information. Maintain objectivity and neutrality."
+    },
+    {
+      "name": "📌 Reading",
+      "type": "format",
+      "prompt": "Add a reading guide to the text. For texts longer than 3 lines, add subtitles, mark key points with a star emoji, and add footnotes for technical terms."
+    },
+    {
+      "name": "🎤 Speech",
+      "type": "format",
+      "prompt": "Adjust the text in the style of a speech. Include: opening greetings, case studies, highlighted quotes, interactive questions, and a concluding summary. The tone should be conversational and engaging."
+    },
+    {
+      "name": "🗂️ Hierarchy",
+      "type": "format",
+      "prompt": "Establish a content hierarchy using Markdown format. Add subtitles and structure the content to make it clear and well-organized."
+    },
+    {
+      "name": "💡 Knowledge",
+      "type": "format",
+      "prompt": "Create user-friendly knowledge cards based on the content. Use a structure of 'Question → Answer → Application', formatted in Markdown with key terms in bold."
+    },
+    {
+      "name": "💬 Dialogue",
+      "type": "format",
+      "prompt": "Convert the text into a Q&A dialogue format. Each segment should start with 'Q:' and 'A:' to reflect a conversational context."
+    },
+    {
+      "name": "🛒 Review",
+      "type": "format",
+      "prompt": "Transform the text into the format of an e-commerce product review. Highlight user experience, compare quality/effectiveness, and conclude with a recommendation for specific target audiences."
+    },
+    {
+      "name": "📝 Meeting",
+      "type": "format",
+      "prompt": "Organize the text according to a meeting minutes template. Include: time, location, attendees, decisions, and action items (with responsible person and deadline), with key conclusions highlighted in a box."
+    },
+    {
+      "name": "📈 Expansion",
+      "type": "length",
+      "prompt": "Expand the text by adding supporting materials such as statistics, case studies, and expert opinions at key points, increasing the content by 30% while preserving the original meaning."
+    },
+    {
+      "name": "✂️ Conciseness",
+      "type": "length",
+      "prompt": "Condense the text by removing redundant expressions and non-core information, using more concise language while retaining 100% of the core meaning, reducing the word count by 40%."
+    },
+    {
+      "name": "📏 Original",
+      "type": "length",
+      "prompt": "Optimize the text to maintain its original length by adjusting sentence structures, replacing with higher-level vocabulary, and improving information density so that the word count remains roughly the same."
+    }
+  ]
+}

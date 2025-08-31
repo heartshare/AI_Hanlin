@@ -1,0 +1,1580 @@
+//
+//  APISettingView.swift
+//  AI_Hanlin
+//
+//  Created by 哆啦好多梦 on 24/3/25.
+//
+
+import SwiftUI
+import SwiftData
+
+// MARK: 大模型 API 编辑与厂商设置合并界面
+struct APIKeysView: View {
+    // 查询所有 APIKeys、所有模型与模型信息
+    @Query var apiKeys: [APIKeys]
+    @Query var allModels: [AllModels]
+    
+    // 环境中的 SwiftData 上下文
+    @Environment(\.modelContext) private var modelContext
+    
+    // APIKey 编辑状态
+    @State private var selectedKey: APIKeys?
+    @State private var testResult: Bool? = nil
+    @State private var isTesting = false
+    @State private var isInquiring = false
+    @State private var inquiryResult: Double? = nil
+    
+    // 错误提示及加载状态
+    @State private var errorMessage: String = ""
+    @State private var showAPIKeyError: Bool = false
+    @State private var loadingCompany: String? = nil
+    
+    // 按完整拼音排序 APIKeys（过滤掉 LOCAL、HANLIN、HANLIN_OPEN 类型）
+    private var sortedApiKeys: [APIKeys] {
+        apiKeys
+            .filter {
+                let company = ($0.company ?? "").uppercased()
+                return company != "LOCAL" && company != "HANLIN" && company != "HANLIN_OPEN"
+            }
+            .sorted { key1, key2 in
+                let pinyin1 = getPinyin(for: getCompanyName(for: key1.company ?? "Unknown"))
+                let pinyin2 = getPinyin(for: getCompanyName(for: key2.company ?? "Unknown"))
+                return pinyin1 < pinyin2
+            }
+    }
+    
+    // 获取唯一厂商，并按完整拼音排序
+    private var sortedCompanies: [(company: String, key: APIKeys)] {
+        let uniqueCompanies = Dictionary(grouping: apiKeys, by: { $0.company })
+            .compactMapValues { $0.first } // 每个厂商只取一条数据
+        return uniqueCompanies.values.sorted { key1, key2 in
+            let pinyin1 = getPinyin(for: getCompanyName(for: key1.company ?? "Unknown"))
+            let pinyin2 = getPinyin(for: getCompanyName(for: key2.company ?? "Unknown"))
+            return pinyin1 < pinyin2
+        }.map { ( ($0.company ?? "Unknown"), $0) }
+    }
+    
+    var body: some View {
+        List {
+            Section {
+                VStack(alignment: .center) {
+                    Image(systemName: "key.2.on.ring")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.hlBluefont)
+                        .padding()
+                    
+                    Text("点击名称或钥匙设置厂商密钥并打开该厂商以使用该厂商的模型")
+                        .font(.footnote)
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom)
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+            }
+            ForEach(sortedCompanies, id: \.company) { company, key in
+                HStack {
+                    // 按钮部分：只有允许配置 API 的才可点击进入编辑界面
+                    Button {
+                        // 仅当允许设置 API 时响应点击
+                        if isAPISettingAllowed(for: key) {
+                            // 重置相关状态并进入编辑界面
+                            inquiryResult = nil
+                            testResult = nil
+                            isTesting = false
+                            isInquiring = false
+                            selectedKey = key
+                        }
+                    } label: {
+                        HStack {
+                            Image(getCompanyIcon(for: company))
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                            Text(getCompanyName(for: company))
+                            Spacer()
+                            if isAPISettingAllowed(for: key) {
+                                Image(systemName: "key")
+                                    .foregroundColor(.hlBluefont)
+                            }
+                        }
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    
+                    // Toggle 控件：如果当前厂商正在加载，则显示加载动画
+                    if loadingCompany == company {
+                        ProgressView()
+                    } else {
+                        Toggle("", isOn: Binding(
+                            get: { !key.isHidden },
+                            set: { newValue in
+                                toggleVendor(key: key, company: company, newValue: newValue)
+                            }
+                        ))
+                        .labelsHidden()
+                        .tint(.hlBlue)
+                        // 当 API Key 无效时，不允许通过 Toggle 开启厂商
+                        .disabled(!hasValidAPIKey(for: key))
+                    }
+                }
+            }
+        }
+        .navigationTitle("密钥设置")
+        .sheet(item: $selectedKey) { key in
+            editKeyView(for: key)
+        }
+        .alert("无法开启厂商", isPresented: $showAPIKeyError) {
+            Button("确定", role: .cancel) {}
+        } message: {
+            Text(errorMessage)
+        }
+    }
+    
+    // MARK: API Key 编辑界面
+    @ViewBuilder
+    private func editKeyView(for key: APIKeys) -> some View {
+        NavigationView {
+            Form {
+                Section {
+                    VStack(alignment: .center) {
+                        Image(getCompanyIcon(for: key.company ?? "Unknown"))
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50, height: 50)
+                            .padding()
+                        
+                        Text("设置 \(getCompanyName(for: key.company ?? "Unknown")) API密钥，以启用该厂商的模型")
+                            .font(.footnote)
+                            .multilineTextAlignment(.center)
+                        
+                        if let url = URL(string: key.help) {
+                            Link("🔗 点此获取 \(getCompanyName(for: key.company ?? "Unknown")) API密钥", destination: url)
+                                .font(.footnote)
+                                .multilineTextAlignment(.center)
+                                .padding(.bottom)
+                        } else {
+                            // 当 URL 无效时可以提供一个备用视图
+                            Text("建议进入其开放平台获取API密钥")
+                                .font(.footnote)
+                                .multilineTextAlignment(.center)
+                                .padding(.bottom)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .center)
+                }
+                Section(header: Text("API Key")) {
+                    SecureField("请输入密钥", text: Binding(
+                        get: { key.key ?? "" },
+                        set: { key.key = $0 }
+                    ))
+                }
+                if key.company == "LAN" {
+                    Section(header: Text("请求地址（URL）")) {
+                        Text(verbatim: "例如：http://127.0.0.1:1234/v1/chat/completions")
+                            .font(.caption)
+                        TextField("请输入请求地址", text: Binding(
+                            get: { key.requestURL ?? "" },
+                            set: { key.requestURL = $0 }
+                        ))
+                        .keyboardType(.URL)
+                    }
+                }
+                // 测试 API 按钮及状态显示
+                Section {
+                    HStack {
+                        Button("测试 API") {
+                            testAPI(for: key)
+                        }
+                        .disabled(isTesting)
+                        Spacer()
+                        if isTesting {
+                            ProgressView()
+                        } else if let result = testResult {
+                            Text(result ? "测试通过" : "测试失败")
+                                .foregroundColor(result ? .green : .red)
+                        }
+                    }
+                }
+                if key.company == "DEEPSEEK" || key.company == "SILICONCLOUD" {
+                    // 余额查询及状态显示
+                    Section {
+                        HStack {
+                            Button("查询 API 余额") {
+                                queryBalance(for: key)
+                            }
+                            .disabled(isInquiring)
+                            Spacer()
+                            if isInquiring {
+                                ProgressView()
+                            } else if let result = inquiryResult {
+                                Text(result == -999 ? "该厂商暂未支持" : "¥\(result)")
+                                    .foregroundColor(result < 10 ? .red : .green)
+                            }
+                        }
+                    }
+                }
+                Section {
+                    Text("⚠️ 注意：配置API后，厂商将自动开启，如需修改，可以在菜单中关闭厂商")
+                        .font(.footnote)
+                }
+            }
+            .navigationTitle("编辑密钥")
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("取消") {
+                        selectedKey = nil
+                    }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("保存") {
+                        key.timestamp = Date()
+                        key.isHidden = false
+                        try? modelContext.save()
+                        selectedKey = nil
+                    }
+                }
+            }
+            .onAppear {
+                testResult = nil
+            }
+        }
+    }
+    
+    // MARK: - API 测试与查询
+    /// 点击测试 API 时调用
+    private func testAPI(for key: APIKeys) {
+        isTesting = true
+        testResult = nil
+        Task {
+            let result = await testAIAPI(
+                apiKey: key.key ?? "",
+                requestURL: key.requestURL ?? "",
+                company: key.company ?? ""
+            )
+            testResult = result
+            isTesting = false
+        }
+    }
+    
+    /// 点击查询 API 余额时调用
+    private func queryBalance(for key: APIKeys) {
+        isInquiring = true
+        inquiryResult = nil
+        Task {
+            defer { isInquiring = false }
+            guard let company = key.company?.uppercased(),
+                  let token = key.key, !token.isEmpty else { return }
+            do {
+                switch company {
+                case "DEEPSEEK":
+                    inquiryResult = try await fetchDeepSeekBalance(token: token)
+                case "SILICONCLOUD":
+                    inquiryResult = try await fetchSiliconFlowBalance(token: token)
+                default:
+                    inquiryResult = -999
+                }
+            } catch {
+                print("余额查询失败：\(error)")
+                inquiryResult = nil
+            }
+        }
+    }
+    
+    // MARK: - 厂商隐藏/显示处理
+    /// 处理厂商开关逻辑，并增加加载状态
+    private func toggleVendor(key: APIKeys, company: String, newValue: Bool) {
+        loadingCompany = company
+        DispatchQueue.global(qos: .userInitiated).async {
+            DispatchQueue.main.async {
+                if !newValue {
+                    // 关闭厂商
+                    key.isHidden = true
+                    updateModelVisibility(for: company, isHidden: true)
+                } else if hasValidAPIKey(for: key) {
+                    // 开启厂商（API Key 有效）
+                    key.isHidden = false
+                } else {
+                    // API Key 为空时阻止开启，并显示错误提示
+                    errorMessage = "\(getCompanyName(for: company)) 需要有效的 API Key，请先设置密钥。"
+                    showAPIKeyError = true
+                }
+                saveChanges()
+                loadingCompany = nil
+            }
+        }
+    }
+    
+    /// 检查 APIKey 是否有效（非空即可）
+    private func hasValidAPIKey(for key: APIKeys) -> Bool {
+        return !(key.key?.isEmpty ?? true)
+    }
+    
+    /// 保存数据
+    private func saveChanges() {
+        DispatchQueue.main.async {
+            do {
+                try modelContext.save()
+            } catch {
+                print("保存失败: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    /// 将文本转换为拼音（大写），用于排序
+    private func getPinyin(for text: String) -> String {
+        let mutableString = NSMutableString(string: text) as CFMutableString
+        CFStringTransform(mutableString, nil, kCFStringTransformToLatin, false)
+        CFStringTransform(mutableString, nil, kCFStringTransformStripDiacritics, false)
+        return (mutableString as String).uppercased()
+    }
+    
+    /// 更新 AllModels 与 ModelsInfo 数据库中该厂商的所有模型的 isHidden 状态
+    private func updateModelVisibility(for company: String, isHidden: Bool) {
+        for model in allModels where model.company == company {
+            model.isHidden = isHidden
+        }
+    }
+    
+    /// 判断是否允许进入 API Key 编辑（即允许设置 API），此处根据公司名称过滤
+    private func isAPISettingAllowed(for key: APIKeys) -> Bool {
+        guard let company = key.company?.uppercased() else { return false }
+        return !(company == "LOCAL" || company == "HANLIN" || company == "HANLIN_OPEN")
+    }
+}
+
+// MARK: 搜索设置（API 配置、厂商选择、双语检索配置）界面
+struct SearchSettingView: View {
+    // 从数据库中获取搜索密钥配置
+    @Query var searchKeys: [SearchKeys]
+    // 从数据库中获取用户信息（用于双语检索配置）
+    @Query private var users: [UserInfo]
+    @Environment(\.modelContext) private var modelContext
+    
+    // SearchKeysView 部分状态
+    // 用于编辑 API 配置状态
+    @State private var selectedKey: SearchKeys?
+    // API 测试相关状态
+    @State private var testResult: Bool? = nil
+    @State private var isTesting = false
+    // 切换厂商启用状态时的加载与错误提示状态
+    @State private var loadingCompany: String? = nil
+    @State private var errorMessage: String = ""
+    @State private var showError: Bool = false
+    
+    // 双语检索配置状态
+    @State private var bilingualSearch: Bool = true
+    @State private var searchCount: Int = 10
+    @State private var searchEnable: Bool = true
+    
+    // SearchKeysView 排序（按照公司名称拼音排序）
+    private var sortedSearchKeys: [SearchKeys] {
+        searchKeys.sorted { key1, key2 in
+            let pinyin1 = getPinyin(for: getCompanyName(for: key1.company ?? "Unknown"))
+            let pinyin2 = getPinyin(for: getCompanyName(for: key2.company ?? "Unknown"))
+            return pinyin1 < pinyin2
+        }
+    }
+    
+    var body: some View {
+        Form {
+            // 顶部说明区域：统一介绍搜索配置的意义
+            Section {
+                VStack(alignment: .center) {
+                    Image(systemName: "magnifyingglass")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.hlBluefont)
+                        .padding()
+                    
+                    Text("设置搜索功能，以便在聊天对话时获取互联网内容，提升回答效果。个性化的设置能最大程度的平衡你的需求与检索带来的成本消耗")
+                        .font(.footnote)
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom)
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+            }
+            
+            // 检索设置部分
+            Section(header: Text("模型在需要时主动搜索")) {
+                Toggle("启用主动搜索", isOn: Binding(
+                    get: { searchEnable },
+                    set: { searchEnable = $0 }))
+                .tint(.hlBlue)
+            }
+            
+            Section(header: Text("搜索结果数量（范围：5-20）")) {
+                Stepper(value: $searchCount, in: 5...20) {
+                    Text("搜索结果数量：\(searchCount)")
+                }
+            }
+            
+            Section(header: Text("搜索时同时搜索中英文内容")) {
+                Toggle("中英文双语检索", isOn: $bilingualSearch)
+                    .tint(.hlBlue)
+            }
+            
+            // 搜索 API 配置及厂商选择部分
+            Section(header: Text("搜索引擎选择（最多只能开启一个）")) {
+                ForEach(sortedSearchKeys) { key in
+                    HStack {
+                        // 点击左侧区域进入编辑 API 配置界面
+                        Button {
+                            selectedKey = key
+                        } label: {
+                            HStack {
+                                Image(getCompanyIcon(for: key.company ?? "Unknown"))
+                                    .resizable()
+                                    .frame(width: 24, height: 24)
+                                Text(getCompanyName(for: key.company ?? "Unknown"))
+                                    .foregroundColor(.primary)
+                                
+                                // 显示各厂商的计费或免费说明
+                                switch key.company?.uppercased() {
+                                case "GOOGLE_SEARCH":
+                                    Text("100次免费/日")
+                                        .font(.caption)
+                                        .foregroundColor(.green)
+                                case "TAVILY":
+                                    Text("1000免费积分/月")
+                                        .font(.caption)
+                                        .foregroundColor(.green)
+                                case "LANGSEARCH":
+                                    Text("免费")
+                                        .font(.caption)
+                                        .foregroundColor(.green)
+                                case "BRAVE":
+                                    Text("2000次免费/月")
+                                        .font(.caption)
+                                        .foregroundColor(.green)
+                                default:
+                                    if let price = key.price {
+                                        Text("¥\(String(format: "%.4f", price))/次")
+                                            .font(.caption)
+                                            .foregroundColor(.orange)
+                                    }
+                                }
+                                
+                                Spacer()
+                                
+                                Image(systemName: "key")
+                                    .foregroundColor(.hlBluefont)
+                            }
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        // 右侧区域：显示加载指示或 Toggle 控件切换启用状态
+                        if loadingCompany == key.company {
+                            ProgressView()
+                        } else {
+                            Toggle("", isOn: Binding(
+                                get: { key.isUsing },
+                                set: { newValue in
+                                    toggleVendor(for: key, newValue: newValue)
+                                }
+                            ))
+                            .labelsHidden()
+                            .tint(.hlBlue)
+                        }
+                    }
+                }
+            }
+            
+            Section(header: Text("功能列表")) {
+                Label("联网信息检索", systemImage: "network")
+                Label("学术论文检索", systemImage: "graduationcap")
+                Label("网页信息阅读", systemImage: "text.and.command.macwindow")
+                Label("网络文件阅读", systemImage: "text.document")
+            }
+        }
+        .navigationTitle("联网搜索")
+        // 编辑 API 配置界面（SearchKeysView 部分）的弹出 sheet
+        .sheet(item: $selectedKey) { key in
+            editKeyView(for: key)
+        }
+        // 出现错误时弹出警告
+        .alert(errorMessage, isPresented: $showError) {
+            Button("确定", role: .cancel) { }
+        }
+        // 加载/保存双语检索相关的用户信息
+        .onAppear {
+            loadUserInfo()
+        }
+        .onDisappear {
+            saveUserInfo()
+        }
+    }
+    
+    // 加载数据库中的用户信息（双语检索设置）
+    private func loadUserInfo() {
+        if let existingUser = users.first {
+            DispatchQueue.main.async {
+                self.bilingualSearch = existingUser.bilingualSearch
+                self.searchCount = existingUser.searchCount
+                self.searchEnable = existingUser.useSearch
+            }
+        }
+    }
+    
+    // 保存双语检索设置到数据库
+    private func saveUserInfo() {
+        if let existingUser = users.first {
+            existingUser.bilingualSearch = bilingualSearch
+            existingUser.searchCount = searchCount
+            existingUser.useSearch = searchEnable
+        } else {
+            let newUser = UserInfo(
+                bilingualSearch: bilingualSearch,
+                useSearch: searchEnable,
+                searchCount: searchCount,
+            )
+            modelContext.insert(newUser)
+        }
+        
+        do {
+            try modelContext.save()
+        } catch {
+            print("保存失败：\(error.localizedDescription)")
+        }
+    }
+    
+    // 编辑搜索 API 密钥界面（SearchKeysView 部分）
+    @ViewBuilder
+    private func editKeyView(for key: SearchKeys) -> some View {
+        NavigationView {
+            Form {
+                Section {
+                    VStack(alignment: .center) {
+                        Image(getCompanyIcon(for: key.company ?? "Unknown"))
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50, height: 50)
+                            .padding()
+                        
+                        Text("设置 \(getCompanyName(for: key.company ?? "Unknown")) API密钥，以开启该搜索引擎")
+                            .font(.footnote)
+                            .multilineTextAlignment(.center)
+                        
+                        if let url = URL(string: key.help) {
+                            Link("🔗 点此获取 \(getCompanyName(for: key.company ?? "Unknown")) API密钥", destination: url)
+                                .font(.footnote)
+                                .multilineTextAlignment(.center)
+                                .padding(.bottom)
+                        } else {
+                            Text("建议进入其开放平台获取API密钥")
+                                .font(.footnote)
+                                .multilineTextAlignment(.center)
+                                .padding(.bottom)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .center)
+                }
+                Section(header: Text("密钥")) {
+                    SecureField("请输入密钥", text: Binding(
+                        get: { key.key ?? "" },
+                        set: { key.key = $0 }
+                    ))
+                }
+                // 测试 API 部分
+                Section {
+                    HStack {
+                        Button("测试 API") {
+                            testAPI(for: key)
+                        }
+                        .disabled(isTesting)
+                        
+                        Spacer()
+                        
+                        if isTesting {
+                            ProgressView()
+                        } else if let result = testResult {
+                            Text(result ? "测试通过" : "测试失败")
+                                .foregroundColor(result ? .green : .red)
+                        }
+                    }
+                }
+                Section {
+                    Text("⚠️ 注意：配置 API 后，请在菜单中打开您要使用的搜索引擎")
+                        .font(.footnote)
+                }
+            }
+            .navigationTitle("编辑密钥")
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("取消") {
+                        selectedKey = nil
+                    }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("保存") {
+                        key.timestamp = Date()
+                        try? modelContext.save()
+                        selectedKey = nil
+                    }
+                }
+            }
+            .onAppear {
+                testResult = nil
+            }
+        }
+    }
+    
+    // 测试搜索 API
+    private func testAPI(for key: SearchKeys) {
+        isTesting = true
+        testResult = nil
+        
+        Task {
+            // 根据 key.company 获取对应的搜索引擎，默认使用 .LANGSEARCH
+            let engine = SearchEngine(rawValue: key.company?.uppercased() ?? "") ?? .LANGSEARCH
+            let result = await testSearchAPI(
+                apiKey: key.key ?? "",
+                requestURL: key.requestURL ?? "",
+                engine: engine
+            )
+            testResult = result
+            isTesting = false
+        }
+    }
+    
+    // 切换搜索厂商启用状态
+    /// 仅允许一个厂商启用。若开启当前厂商，则关闭其它所有厂商。
+    private func toggleVendor(for key: SearchKeys, newValue: Bool) {
+        loadingCompany = key.company
+        
+        DispatchQueue.main.async {
+            if newValue {
+                // 开启前检查是否已配置 API Key
+                if key.key?.isEmpty ?? true {
+                    errorMessage = "\(getCompanyName(for: key.company ?? "Unknown")) 需要配置 API Key 才能启用。"
+                    showError = true
+                    loadingCompany = nil
+                    return
+                }
+                // 开启当前厂商，同时关闭其它厂商
+                for vendor in searchKeys {
+                    vendor.isUsing = (vendor.id == key.id)
+                }
+            } else {
+                // 关闭当前厂商
+                key.isUsing = false
+            }
+            
+            do {
+                try modelContext.save()
+            } catch {
+                errorMessage = "保存失败: \(error.localizedDescription)"
+                showError = true
+            }
+            loadingCompany = nil
+        }
+    }
+    
+    // 获取公司名称的拼音（用于排序）
+    private func getPinyin(for text: String) -> String {
+        let mutableString = NSMutableString(string: text) as CFMutableString
+        CFStringTransform(mutableString, nil, kCFStringTransformToLatin, false)
+        CFStringTransform(mutableString, nil, kCFStringTransformStripDiacritics, false)
+        return (mutableString as String).uppercased()
+    }
+}
+
+// MARK: - 知识背包配置界面
+struct KnowledgeSettingView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query private var users: [UserInfo] // 从数据库获取用户信息
+    
+    @State private var knowledgeEnable: Bool = true
+    @State private var knowledgeCount: Int = 10
+    @State private var knowledgeSimilarity: Double = 0.5
+    
+    var body: some View {
+        Form {
+            Section {
+                VStack(alignment: .center) {
+                    Image(systemName: "backpack")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.hlBluefont)
+                        .padding()
+                    
+                    Text("设置知识功能，以便在聊天对话时翻找知识背包，获取私有知识库内容，提升回答效果。")
+                        .font(.footnote)
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom)
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+            }
+            
+            Section(header: Text("模型在需要时主动翻找知识背包")) {
+                Toggle("启用主动翻找", isOn: Binding(
+                    get: { knowledgeEnable },
+                    set: { knowledgeEnable = $0 }))
+                .tint(.hlBlue)
+            }
+            
+            Section(header: Text("翻找结果数量（范围：5-20）")) {
+                Stepper(value: $knowledgeCount, in: 5...20) {
+                    Text("翻找结果数量：\(knowledgeCount)")
+                }
+            }
+            
+            Section(header: Text("匹配度阈值（范围：0.05 - 1.0）")) {
+                Stepper(value: $knowledgeSimilarity, in: 0.05...1.0, step: 0.05) {
+                    Text(String(format: "匹配度阈值：%.2f", knowledgeSimilarity))
+                }
+            }
+            
+            Section(header: Text("功能列表")) {
+                Label("知识背包翻找", systemImage: "backpack")
+                Label("知识文档撰写", systemImage: "text.document")
+            }
+        }
+        .navigationTitle("知识背包")
+        .onAppear {
+            loadUserInfo()
+        }
+        .onDisappear {
+            saveUserInfo()
+        }
+    }
+    
+    /// 加载数据库中的用户信息
+    private func loadUserInfo() {
+        if let existingUser = users.first {
+            DispatchQueue.main.async {
+                self.knowledgeEnable = existingUser.useKnowledge
+                self.knowledgeCount = existingUser.knowledgeCount
+                self.knowledgeSimilarity = existingUser.knowledgeSimilarity
+            }
+        }
+    }
+    
+    /// 保存当前设置到数据库
+    private func saveUserInfo() {
+        if let existingUser = users.first {
+            existingUser.useKnowledge = knowledgeEnable
+            existingUser.knowledgeCount = knowledgeCount
+            existingUser.knowledgeSimilarity = knowledgeSimilarity
+        } else {
+            let newUser = UserInfo(
+                useKnowledge: knowledgeEnable,
+                knowledgeCount: knowledgeCount,
+                knowledgeSimilarity: knowledgeSimilarity
+            )
+            modelContext.insert(newUser)
+        }
+        
+        do {
+            try modelContext.save()
+        } catch {
+            print("保存失败：\(error.localizedDescription)")
+        }
+    }
+}
+
+// MARK: - 地图配置界面
+struct MapSettingView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query private var users: [UserInfo] // 从数据库获取用户信息
+    // 查询 toolClass 为 "map" 的 ToolKeys 数据
+    @Query(filter: #Predicate<ToolKeys> { key in
+        key.toolClass == "map"
+    })
+    var mapKeys: [ToolKeys]
+    
+    @State private var mapEnable: Bool = true
+    
+    // 用于地图引擎配置相关状态
+    @State private var selectedMapKey: ToolKeys?
+    @State private var loadingMapCompany: String? = nil
+    @State private var errorMessage: String = ""
+    @State private var showError: Bool = false
+    
+    // 根据需求对 mapKeys 排序，此处按公司名称排序
+    private var sortedMapKeys: [ToolKeys] {
+        mapKeys.sorted { $0.company < $1.company }
+    }
+    
+    var body: some View {
+        
+        Form {
+            Section {
+                ZStack {
+                    // 背景图片只在内容范围内展示
+                    Image("Hangzhou")
+                        .resizable()
+                        .scaledToFill()
+                        .overlay(
+                            Color(.systemBackground).opacity(0.80)
+                        )
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
+                    VStack(alignment: .center) {
+                        Image(systemName: "map")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .foregroundColor(.hlBluefont)
+                            .padding()
+                        
+                        Text("设置地图功能，以便在与支持工具的模型对话时，更好的获取位置相关的信息并让模型向你展示地图")
+                            .font(.footnote)
+                            .multilineTextAlignment(.center)
+                            .padding(.bottom)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .padding()
+                }
+                .background(Color.clear)
+                .listRowBackground(Color.clear)
+            }
+            
+            Section {
+                Toggle("启用地图", isOn: Binding(
+                    get: { mapEnable },
+                    set: { mapEnable = $0 }))
+                .tint(.hlBlue)
+            }
+            
+            Section(header: Text("地图引擎选择（最多只能开启一个）")) {
+                ForEach(sortedMapKeys) { key in
+                    HStack {
+                        // 左侧区域：点击可进入 API 配置界面（APPLEMAPP 不可配置 API）
+                        Button {
+                            if key.company.uppercased() != "APPLEMAP" {
+                                selectedMapKey = key
+                            }
+                        } label: {
+                            HStack {
+                                Image(getCompanyIcon(for: key.company))
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 24, height: 24)
+                                Text(getCompanyName(for: key.company))
+                                    .foregroundColor(.primary)
+                                Spacer()
+                                // 对于默认的 APPLEMAP，显示“默认”标识
+                                if key.company.uppercased() == "APPLEMAP" {
+                                    Text("默认")
+                                        .font(.caption)
+                                        .foregroundColor(.gray)
+                                } else {
+                                    Image(systemName: "key")
+                                        .foregroundColor(.hlBluefont)
+                                }
+                            }
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        // 右侧区域：切换启用状态（仅一个引擎能启用）
+                        if loadingMapCompany == key.company {
+                            ProgressView()
+                        } else {
+                            Toggle("", isOn: Binding(
+                                get: { key.isUsing },
+                                set: { newValue in
+                                    toggleMapEngine(for: key, newValue: newValue)
+                                }
+                            ))
+                            .labelsHidden()
+                            .tint(.hlBlue)
+                        }
+                    }
+                }
+            }
+            
+            Section(header: Text("功能列表")) {
+                Label("用户定位查询", systemImage: "location")
+                Label("特定位置搜索", systemImage: "mappin.and.ellipse")
+                Label("附近兴趣搜索", systemImage: "mecca")
+                Label("自动路线规划", systemImage: "point.bottomleft.forward.to.point.topright.filled.scurvepath")
+            }
+        }
+        .navigationTitle("地图规划")
+        .onAppear {
+            loadUserInfo()
+        }
+        .onDisappear {
+            saveUserInfo()
+        }
+        // 弹出编辑 API 配置界面
+        .sheet(item: $selectedMapKey) { key in
+            editMapKeyView(for: key)
+        }
+        .alert(errorMessage, isPresented: $showError) {
+            Button("确定", role: .cancel) { }
+        }
+    }
+    
+    /// 加载数据库中的用户信息
+    private func loadUserInfo() {
+        if let existingUser = users.first {
+            DispatchQueue.main.async {
+                self.mapEnable = existingUser.useMap
+            }
+        }
+    }
+    
+    /// 保存当前设置到数据库
+    private func saveUserInfo() {
+        if let existingUser = users.first {
+            existingUser.useMap = mapEnable
+        } else {
+            let newUser = UserInfo(
+                useMap: mapEnable,
+            )
+            modelContext.insert(newUser)
+        }
+        
+        do {
+            try modelContext.save()
+        } catch {
+            print("保存失败：\(error.localizedDescription)")
+        }
+    }
+    
+    // 仅允许一个引擎启用；启用非 AppleMap 时需确保 API Key 已配置
+    private func toggleMapEngine(for key: ToolKeys, newValue: Bool) {
+        loadingMapCompany = key.company
+        DispatchQueue.main.async {
+            if newValue {
+                // 对于非 AppleMap 必须配置 API Key 才能启用
+                if key.company.uppercased() != "APPLEMAP" && key.key.isEmpty {
+                    errorMessage = "\(getCompanyName(for: key.company)) 需要配置 API Key 才能启用。"
+                    showError = true
+                    loadingMapCompany = nil
+                    return
+                }
+                // 启用当前引擎，同时关闭其它引擎
+                for engine in mapKeys {
+                    engine.isUsing = (engine.id == key.id)
+                }
+            } else {
+                // 禁用当前引擎
+                key.isUsing = false
+            }
+            
+            do {
+                try modelContext.save()
+            } catch {
+                errorMessage = "保存失败: \(error.localizedDescription)"
+                showError = true
+            }
+            ensureDefaultEngine()
+            loadingMapCompany = nil
+        }
+    }
+    
+    /// 如果没有任何引擎被启用，就自动启用系统 AppleMap
+    private func ensureDefaultEngine() {
+        // 只在整体“启用地图”是开的情况下才做
+        guard mapEnable else { return }
+        // 如果一个都没被 isUsing
+        if !mapKeys.contains(where: { $0.isUsing }) {
+            if let apple = mapKeys.first(where: { $0.company.uppercased() == "APPLEMAP" }) {
+                apple.isUsing = true
+                do {
+                    try modelContext.save()
+                } catch {
+                    print("默认启用 AppleMap 失败：\(error)")
+                }
+            }
+        }
+    }
+    
+    // MARK: 编辑 API 配置视图
+    @ViewBuilder
+    private func editMapKeyView(for key: ToolKeys) -> some View {
+        NavigationView {
+            Form {
+                // APPLEMAP 无需配置 API
+                if key.company.uppercased() == "APPLEMAP" {
+                    Section {
+                        Text("APPLEMAP 不需要配置 API Key")
+                            .foregroundColor(.gray)
+                    }
+                } else {
+                    Section {
+                        VStack(alignment: .center) {
+                            Image(getCompanyIcon(for: key.company))
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
+                                .padding()
+                            
+                            Text("设置 \(getCompanyName(for: key.company)) API密钥，以开启该地图引擎")
+                                .font(.footnote)
+                                .multilineTextAlignment(.center)
+                            
+                            if let url = URL(string: key.help) {
+                                Link("🔗 点此获取 \(getCompanyName(for: key.company)) API密钥", destination: url)
+                                    .font(.footnote)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.bottom)
+                            } else {
+                                // 当 URL 无效时可以提供一个备用视图
+                                Text("建议进入其开放平台获取API密钥")
+                                    .font(.footnote)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.bottom)
+                            }
+                        }
+                        .frame(maxWidth: .infinity, alignment: .center)
+                    }
+                    
+                    Section(header: Text("密钥")) {
+                        SecureField("请输入 API Key", text: Binding(
+                            get: { key.key },
+                            set: { key.key = $0 }
+                        ))
+                    }
+                }
+            }
+            .navigationTitle("编辑密钥")
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("取消") {
+                        selectedMapKey = nil
+                    }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("保存") {
+                        key.timestamp = Date()
+                        try? modelContext.save()
+                        selectedMapKey = nil
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// MARK: - 日历配置界面
+struct CalendarSettingView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query private var users: [UserInfo] // 从数据库获取用户信息
+    
+    @State private var calendarEnable: Bool = true
+    
+    var body: some View {
+        Form {
+            Section {
+                VStack(alignment: .center) {
+                    Image(systemName: "calendar")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.hlBluefont)
+                        .padding()
+                    
+                    Text("设置日历功能，以便在与支持工具的模型对话时，获取日历日程、提醒事项信息或者让模型写入日历日程、提醒事项")
+                        .font(.footnote)
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom)
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+            }
+            
+            Section {
+                Toggle("启用日历", isOn: Binding(
+                    get: { calendarEnable },
+                    set: { calendarEnable = $0 }))
+                .tint(.hlBlue)
+            }
+            
+            Section(header: Text("功能列表")) {
+                Label("查找日历事件", systemImage: "calendar.badge.checkmark")
+                Label("查找提醒事项", systemImage: "checklist")
+                Label("新增日历事件", systemImage: "calendar.badge.plus")
+                Label("新增提醒事项", systemImage: "text.badge.plus")
+            }
+        }
+        .navigationTitle("日历提醒")
+        .onAppear {
+            loadUserInfo()
+        }
+        .onDisappear {
+            saveUserInfo()
+        }
+    }
+    
+    /// 加载数据库中的用户信息
+    private func loadUserInfo() {
+        if let existingUser = users.first {
+            DispatchQueue.main.async {
+                self.calendarEnable = existingUser.useCalendar
+            }
+        }
+    }
+    
+    /// 保存当前设置到数据库
+    private func saveUserInfo() {
+        if let existingUser = users.first {
+            existingUser.useCalendar = calendarEnable
+        } else {
+            let newUser = UserInfo(
+                useCalendar: calendarEnable,
+            )
+            modelContext.insert(newUser)
+        }
+        
+        do {
+            try modelContext.save()
+        } catch {
+            print("保存失败：\(error.localizedDescription)")
+        }
+    }
+}
+
+// MARK: - 网页配置界面
+struct CodeSettingView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query private var users: [UserInfo] // 从数据库获取用户信息
+    
+    @State private var CodeEnable: Bool = true
+    
+    var body: some View {
+        Form {
+            Section {
+                VStack(alignment: .center) {
+                    Image(systemName: "apple.terminal")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.hlBluefont)
+                        .padding()
+                    
+                    Text("设置代码功能，以便在与支持工具的模型对话时，模型为你运行Python代码，或查看模型为你制作网页内容，并与其交互。")
+                        .font(.footnote)
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom)
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+            }
+            
+            Section {
+                Toggle("启用代码", isOn: Binding(
+                    get: { CodeEnable },
+                    set: { CodeEnable = $0 }))
+                .tint(.hlBlue)
+            }
+            
+            Section(header: Text("功能列表")) {
+                Label("渲染网页内容", systemImage: "macwindow.badge.plus")
+                Label("运行程序代码", systemImage: "apple.terminal")
+            }
+        }
+        .navigationTitle("代码执行")
+        .onAppear {
+            loadUserInfo()
+        }
+        .onDisappear {
+            saveUserInfo()
+        }
+    }
+    
+    /// 加载数据库中的用户信息
+    private func loadUserInfo() {
+        if let existingUser = users.first {
+            DispatchQueue.main.async {
+                self.CodeEnable = existingUser.useCode
+            }
+        }
+    }
+    
+    /// 保存当前设置到数据库
+    private func saveUserInfo() {
+        if let existingUser = users.first {
+            existingUser.useCode = CodeEnable
+        } else {
+            let newUser = UserInfo(
+                useCode: CodeEnable,
+            )
+            modelContext.insert(newUser)
+        }
+        
+        do {
+            try modelContext.save()
+        } catch {
+            print("保存失败：\(error.localizedDescription)")
+        }
+    }
+}
+
+// MARK: - 健康配置界面
+struct HealthSettingView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query private var users: [UserInfo] // 从数据库获取用户信息
+    
+    @State private var healthEnable: Bool = true
+    
+    var body: some View {
+        Form {
+            Section {
+                VStack(alignment: .center) {
+                    Image(systemName: "heart")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.hlBluefont)
+                        .padding()
+                    
+                    Text("设置健康功能，以便在与支持工具的模型对话时，模型能够获取你的健康信息或帮你记录健康、饮食等信息。")
+                        .font(.footnote)
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom)
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+            }
+            
+            Section {
+                Toggle("启用健康", isOn: Binding(
+                    get: { healthEnable },
+                    set: { healthEnable = $0 }))
+                .tint(.hlBlue)
+            }
+            
+            Section(header: Text("功能列表")) {
+                Label("查询步数距离", systemImage: "figure.walk")
+                Label("查询能量消耗", systemImage: "flame")
+                Label("查询营养摄入", systemImage: "bubbles.and.sparkles")
+                Label("写入营养摄入", systemImage: "pencil.and.list.clipboard")
+            }
+        }
+        .navigationTitle("健康生活")
+        .onAppear {
+            loadUserInfo()
+        }
+        .onDisappear {
+            saveUserInfo()
+        }
+    }
+    
+    /// 加载数据库中的用户信息
+    private func loadUserInfo() {
+        if let existingUser = users.first {
+            DispatchQueue.main.async {
+                self.healthEnable = existingUser.useHealth
+            }
+        }
+    }
+    
+    /// 保存当前设置到数据库
+    private func saveUserInfo() {
+        if let existingUser = users.first {
+            existingUser.useHealth = healthEnable
+        } else {
+            let newUser = UserInfo(
+                useHealth: healthEnable,
+            )
+            modelContext.insert(newUser)
+        }
+        
+        do {
+            try modelContext.save()
+        } catch {
+            print("保存失败：\(error.localizedDescription)")
+        }
+    }
+}
+
+// MARK: - 健康配置界面
+struct CanvasSettingView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query private var users: [UserInfo] // 从数据库获取用户信息
+    
+    @State private var canvasEnable: Bool = true
+    
+    var body: some View {
+        Form {
+            Section {
+                VStack(alignment: .center) {
+                    Image(systemName: "pencil.and.outline")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.hlBluefont)
+                        .padding()
+                    
+                    Text("设置画布功能，以便在与支持工具的模型对话时，模型能够使用画布工具，带来更好的长文本、大段落或结构化内容的输出编辑体验。")
+                        .font(.footnote)
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom)
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+            }
+            
+            Section {
+                Toggle("启用画布", isOn: Binding(
+                    get: { canvasEnable },
+                    set: { canvasEnable = $0 }))
+                .tint(.hlBlue)
+            }
+            
+            Section(header: Text("功能列表")) {
+                Label("创建信息画布", systemImage: "pencil.and.outline")
+                Label("编辑画布内容", systemImage: "pencil.and.scribble")
+                Label("运行画布代码", systemImage: "play.circle")
+                Label("渲染画布网页", systemImage: "macwindow")
+            }
+        }
+        .navigationTitle("信息画布")
+        .onAppear {
+            loadUserInfo()
+        }
+        .onDisappear {
+            saveUserInfo()
+        }
+    }
+    
+    /// 加载数据库中的用户信息
+    private func loadUserInfo() {
+        if let existingUser = users.first {
+            DispatchQueue.main.async {
+                self.canvasEnable = existingUser.useCanvas
+            }
+        }
+    }
+    
+    /// 保存当前设置到数据库
+    private func saveUserInfo() {
+        if let existingUser = users.first {
+            existingUser.useCanvas = canvasEnable
+        } else {
+            let newUser = UserInfo(
+                useCanvas: canvasEnable,
+            )
+            modelContext.insert(newUser)
+        }
+        
+        do {
+            try modelContext.save()
+        } catch {
+            print("保存失败：\(error.localizedDescription)")
+        }
+    }
+}
+
+// MARK: - 天气配置界面
+struct WeatherSettingView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query private var users: [UserInfo]                   // 从数据库获取用户信息
+    // 查询 toolClass 为 "weather" 的 ToolKeys 数据
+    @Query(filter: #Predicate<ToolKeys> { key in
+        key.toolClass == "weather"
+    })
+    var weatherKeys: [ToolKeys]
+    
+    @State private var weatherEnable: Bool = true
+    
+    // 用于天气服务商配置相关状态
+    @State private var selectedWeatherKey: ToolKeys?
+    @State private var loadingWeatherCompany: String? = nil
+    @State private var errorMessage: String = ""
+    @State private var showError: Bool = false
+    
+    // 对 weatherKeys 按公司名称排序
+    private var sortedWeatherKeys: [ToolKeys] {
+        weatherKeys.sorted { $0.company < $1.company }
+    }
+    
+    var body: some View {
+        Form {
+            Section {
+                VStack(alignment: .center) {
+                    Image(systemName: "cloud.sun")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.hlBluefont)
+                        .padding()
+                    
+                    Text("设置天气功能，以便在与支持工具的模型对话时，获取实时天气信息和未来天气预报")
+                        .font(.footnote)
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom)
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+            }
+            
+            Section {
+                Toggle("启用天气", isOn: Binding(
+                    get: { weatherEnable },
+                    set: { weatherEnable = $0 }
+                ))
+                .tint(.hlBlue)
+            }
+            
+            Section(header: Text("天气服务商选择（最多只能开启一个）")) {
+                ForEach(sortedWeatherKeys) { key in
+                    HStack {
+                        // 点击进入 API 配置界面
+                        Button {
+                            selectedWeatherKey = key
+                        } label: {
+                            HStack {
+                                Image(getCompanyIcon(for: key.company))
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 24, height: 24)
+                                Text(getCompanyName(for: key.company))
+                                    .foregroundColor(.primary)
+                                Spacer()
+                                Image(systemName: "key")
+                                    .foregroundColor(.hlBluefont)
+                            }
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        // 切换启用状态（仅一个服务商能启用）
+                        if loadingWeatherCompany == key.company {
+                            ProgressView()
+                        } else {
+                            Toggle("", isOn: Binding(
+                                get: { key.isUsing },
+                                set: { newValue in
+                                    toggleWeatherService(for: key, newValue: newValue)
+                                }
+                            ))
+                            .labelsHidden()
+                            .tint(.hlBlue)
+                        }
+                    }
+                }
+            }
+            
+            Section(header: Text("功能列表")) {
+                Label("查询实时天气", systemImage: "cloud.sun")
+                Label("未来天气预报", systemImage: "calendar")
+            }
+        }
+        .navigationTitle("天气查询")
+        .onAppear {
+            loadUserInfo()
+        }
+        .onDisappear {
+            saveUserInfo()
+        }
+        // 弹出编辑 API 配置界面
+        .sheet(item: $selectedWeatherKey) { key in
+            editWeatherKeyView(for: key)
+        }
+        .alert(errorMessage, isPresented: $showError) {
+            Button("确定", role: .cancel) { }
+        }
+    }
+    
+    // MARK: 加载/保存 用户的天气启用状态
+    private func loadUserInfo() {
+        if let existing = users.first {
+            DispatchQueue.main.async {
+                self.weatherEnable = existing.useWeather
+            }
+        }
+    }
+    
+    private func saveUserInfo() {
+        if let existing = users.first {
+            existing.useWeather = weatherEnable
+        } else {
+            let newUser = UserInfo(useWeather: weatherEnable)
+            modelContext.insert(newUser)
+        }
+        do {
+            try modelContext.save()
+        } catch {
+            print("保存失败：\(error.localizedDescription)")
+        }
+    }
+    
+    /// 仅允许一个服务启用；启用时需确保 API Key 已配置
+    private func toggleWeatherService(for key: ToolKeys, newValue: Bool) {
+        loadingWeatherCompany = key.company
+        DispatchQueue.main.async {
+            if newValue {
+                if key.key.isEmpty {
+                    errorMessage = "\(getCompanyName(for: key.company)) 需要配置 API Key 才能启用。"
+                    showError = true
+                    loadingWeatherCompany = nil
+                    return
+                }
+                if key.requestURL.isEmpty {
+                    errorMessage = "\(getCompanyName(for: key.company)) 需要配置 API Host 才能启用。"
+                    showError = true
+                    loadingWeatherCompany = nil
+                    return
+                }
+                for service in weatherKeys {
+                    service.isUsing = (service.id == key.id)
+                }
+            } else {
+                key.isUsing = false
+            }
+            
+            do {
+                try modelContext.save()
+            } catch {
+                errorMessage = "保存失败: \(error.localizedDescription)"
+                showError = true
+            }
+            loadingWeatherCompany = nil
+        }
+    }
+    
+    // MARK: 编辑 API 配置视图
+    @ViewBuilder
+    private func editWeatherKeyView(for key: ToolKeys) -> some View {
+        NavigationView {
+            Form {
+                Section {
+                    VStack(alignment: .center) {
+                        Image(getCompanyIcon(for: key.company))
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50, height: 50)
+                            .padding()
+                        
+                        Text("设置 \(getCompanyName(for: key.company)) API 密钥，以开启该天气服务")
+                            .font(.footnote)
+                            .multilineTextAlignment(.center)
+                        
+                        if let url = URL(string: key.help) {
+                            Link("🔗 点此获取 \(getCompanyName(for: key.company)) API 密钥", destination: url)
+                                .font(.footnote)
+                                .multilineTextAlignment(.center)
+                                .padding(.bottom)
+                        } else {
+                            Text("建议进入其开放平台获取 API 密钥")
+                                .font(.footnote)
+                                .multilineTextAlignment(.center)
+                                .padding(.bottom)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .center)
+                }
+                
+                Section(header: Text("密钥")) {
+                    SecureField("请输入 API Key", text: Binding(
+                        get: { key.key },
+                        set: { key.key = $0 }
+                    ))
+                }
+                
+                Section(header: Text("请求地址")) {
+                    TextField("请输入 API Host", text: Binding(
+                        get: { key.requestURL },
+                        set: { key.requestURL = $0 }
+                    ))
+                }
+            }
+            .navigationTitle("编辑密钥")
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("取消") {
+                        selectedWeatherKey = nil
+                    }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("保存") {
+                        key.timestamp = Date()
+                        try? modelContext.save()
+                        selectedWeatherKey = nil
+                    }
+                }
+            }
+        }
+    }
+}

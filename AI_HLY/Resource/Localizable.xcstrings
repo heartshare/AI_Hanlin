@@ -1,0 +1,5335 @@
+{
+  "sourceLanguage" : "zh-Hans",
+  "strings" : {
+    "" : {
+
+    },
+    " 临 时 对 话 模 式 " : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temporary Dialogue Mode"
+          }
+        }
+      }
+    },
+    " 现有文本" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Existing text"
+          }
+        }
+      }
+    },
+    " 目标文本" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Target text"
+          }
+        }
+      }
+    },
+    "--:--" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "--:--"
+          }
+        }
+      }
+    },
+    "[%lld]" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "[%lld]"
+          }
+        }
+      }
+    },
+    "「群智秒启，AI随行」" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smart Companion, AI on the Go"
+          }
+        }
+      }
+    },
+    "%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "%@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ %2$@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        }
+      }
+    },
+    "%@/%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@/%2$@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@/%2$@"
+          }
+        }
+      }
+    },
+    "%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        }
+      }
+    },
+    "%lld 字" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld characters"
+          }
+        }
+      }
+    },
+    "%lld%%" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%%"
+          }
+        }
+      }
+    },
+    "© 2025 HLY 保留所有权利" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2025 HLY All Rights Reserved"
+          }
+        }
+      }
+    },
+    "⚠️ 当前不是视觉模型，分析图片建议使用视觉模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ Image analysis is recommended to use visual models."
+          }
+        }
+      }
+    },
+    "⚠️ 注意：配置 API 后，请在菜单中打开您要使用的搜索引擎" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ Note: After configuring the API, enable your desired search engine in the menu."
+          }
+        }
+      }
+    },
+    "⚠️ 注意：配置API后，厂商将自动开启，如需修改，可以在菜单中关闭厂商" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ Note: Once configured, the vendor is enabled automatically. To change it, disable it in the menu."
+          }
+        }
+      }
+    },
+    "⚠️ 这是一个外部链接" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ External Link"
+          }
+        }
+      }
+    },
+    "⚠️ 默认智能体不可更改描述" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ The default agent's description cannot be changed."
+          }
+        }
+      }
+    },
+    "⚠️ 默认智能体不可重命名" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ The default agent cannot be renamed."
+          }
+        }
+      }
+    },
+    "✅ 图片已保存" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✅ Image Saved"
+          }
+        }
+      }
+    },
+    "🔗 点此获取 %@ API 密钥" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🔗 Click here to get the %@ API key"
+          }
+        }
+      }
+    },
+    "🔗 点此获取 %@ API密钥" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🔗 Click here to get the %@ API key"
+          }
+        }
+      }
+    },
+    "¥%@/Ktokens" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¥%@/Ktokens"
+          }
+        }
+      }
+    },
+    "¥%@/分钟" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¥%@/min"
+          }
+        }
+      }
+    },
+    "¥%@/次" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¥%@/request"
+          }
+        }
+      }
+    },
+    "¥%lf" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¥%lf"
+          }
+        }
+      }
+    },
+    "100次免费/日" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "100 free uses/day"
+          }
+        }
+      }
+    },
+    "1000免费积分/月" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1000 free points/month"
+          }
+        }
+      }
+    },
+    "2000次免费/月" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2000 free uses/month"
+          }
+        }
+      }
+    },
+    "2025年2月·新加坡" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "February 2025 · Singapore"
+          }
+        }
+      }
+    },
+    "AI翰林院" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AI Hanlin"
+          }
+        }
+      }
+    },
+    "API Key" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API Key"
+          }
+        }
+      }
+    },
+    "API Key 缺失" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API Key Missing"
+          }
+        }
+      }
+    },
+    "APPLEMAP 不需要配置 API Key" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "APPLEMAP does not require API Key configuration."
+          }
+        }
+      }
+    },
+    "Bundle display name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AI Hanlin"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AI翰林院"
+          }
+        }
+      }
+    },
+    "Chat" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chats"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "聊天"
+          }
+        }
+      }
+    },
+    "company_AMAP" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amap"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高德地图"
+          }
+        }
+      }
+    },
+    "company_ANTHROPIC" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anthropic"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anthropic"
+          }
+        }
+      }
+    },
+    "company_APPLEMAP" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Map"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "苹果地图"
+          }
+        }
+      }
+    },
+    "company_ARXIV" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "arXiv"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "arXiv"
+          }
+        }
+      }
+    },
+    "company_BAIDUMAP" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baidu Map"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "百度地图"
+          }
+        }
+      }
+    },
+    "company_BING" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Microsoft Bing"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "微软必应"
+          }
+        }
+      }
+    },
+    "company_BOCHAAI" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bocha AI"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "博查AI"
+          }
+        }
+      }
+    },
+    "company_BRAVE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brave"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brave"
+          }
+        }
+      }
+    },
+    "company_DEEPSEEK" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DeepSeek"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "深度求索"
+          }
+        }
+      }
+    },
+    "company_DOUBAO" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ByteDance Doubao"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "字节豆包"
+          }
+        }
+      }
+    },
+    "company_EXA" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "EXA AI"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "EXA AI"
+          }
+        }
+      }
+    },
+    "company_GITEE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gitee AI"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "模力方舟"
+          }
+        }
+      }
+    },
+    "company_GOOGLE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Google Gemini"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "谷歌Gemini"
+          }
+        }
+      }
+    },
+    "company_GOOGLE_SEARCH" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Google"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "谷歌"
+          }
+        }
+      }
+    },
+    "company_GOOGLEMAP" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Google Map"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "谷歌地图"
+          }
+        }
+      }
+    },
+    "company_HANLIN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hanlin"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "翰林内置"
+          }
+        }
+      }
+    },
+    "company_HANLIN_OPEN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hanlin-Open"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "翰林开源"
+          }
+        }
+      }
+    },
+    "company_HANLINBAG" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hanlin Knowledge Backpack"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "翰林知识背包"
+          }
+        }
+      }
+    },
+    "company_HANLINWEB" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hanlin Web Reader"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "翰林网页阅读"
+          }
+        }
+      }
+    },
+    "company_HUNYUAN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tencent Hunyuan"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "腾讯混元"
+          }
+        }
+      }
+    },
+    "company_KIMI" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moonshot"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月之暗面"
+          }
+        }
+      }
+    },
+    "company_LAN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LAN"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "局域网模型"
+          }
+        }
+      }
+    },
+    "company_LANGSEARCH" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LangSearch"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LangSearch"
+          }
+        }
+      }
+    },
+    "company_LOCAL" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Local"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本地模型"
+          }
+        }
+      }
+    },
+    "company_MINIMAX" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MiniMax"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MiniMax"
+          }
+        }
+      }
+    },
+    "company_MODELSCOPE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Model Scope"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "魔塔社区"
+          }
+        }
+      }
+    },
+    "company_OPENAI" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OpenAI"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OpenAI"
+          }
+        }
+      }
+    },
+    "company_OPENROUTER" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OpenRouter"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OpenRouter"
+          }
+        }
+      }
+    },
+    "company_OPENWEATHER" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OpenWeather"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OpenWeather"
+          }
+        }
+      }
+    },
+    "company_PERPLEXITY" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perplexity"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perplexity"
+          }
+        }
+      }
+    },
+    "company_QWEATHER" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Qweather"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "和风天气"
+          }
+        }
+      }
+    },
+    "company_QWEN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alibaba Tongyi"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阿里通义"
+          }
+        }
+      }
+    },
+    "company_SILICONCLOUD" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SiliconCloud"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "硅基流动"
+          }
+        }
+      }
+    },
+    "company_SPARK" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iFlytek Spark"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "讯飞星火"
+          }
+        }
+      }
+    },
+    "company_STEP" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "StepFun"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阶跃星辰"
+          }
+        }
+      }
+    },
+    "company_TAVILY" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tavily"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tavily"
+          }
+        }
+      }
+    },
+    "company_TIANGONG" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiangong AI"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天工AI"
+          }
+        }
+      }
+    },
+    "company_UNKNOWN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未知"
+          }
+        }
+      }
+    },
+    "company_WENXIN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baidu Wenxin"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "百度文心"
+          }
+        }
+      }
+    },
+    "company_XAI" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xAI"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "xAI"
+          }
+        }
+      }
+    },
+    "company_YI" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "01.AI"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "零一万物"
+          }
+        }
+      }
+    },
+    "company_ZHIPUAI" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Z.AI"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "智谱华章"
+          }
+        }
+      }
+    },
+    "core_features_content" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🚀 **Extensive Model Integration**  \nSeamlessly integrates over 100 AI models from 20 leading providers, including Qwen, DeepSeek, ZhipuAI, Doubao, OpenAI, Gemini, xAI, and more. Compatible with AI search engines like Perplexity, EXA AI, and Tavily—one-stop access to diverse intelligent capabilities, making AI truly within reach!\n\n💾 **Local Model Support**  \nFully supports GGUF-based local models and LM Studio LAN integration. Enjoy powerful AI capabilities without internet access, anytime, anywhere—step into the era of offline AI with ease.\n\n🧠 **New Paradigm of AI Collaboration**  \nIntroducing “multi-model group chat” and “observe button” features for collaborative AI workflows. Combine the strengths of multiple expert models, with customizable prompt libraries for instant access—collaboration has never been this smart and efficient.\n\n🔗 **All-Scenario Interaction**  \nDesigned for text, image understanding, and web search. Supports uploading images and local files for multimodal interaction. Integrating tools like maps, memory, and calendars, AI fully integrates into your digital daily life.\n\n🔍 **Supercharged Search Engine**  \nIntegrated with multiple search providers, featuring context-aware question optimization, bilingual queries, and image-based prompts. Parse web links, build personal knowledge bases, and bridge information gaps with ease.\n\n👀 **Visual Intelligence Hub**  \nOptimized image interaction interface with 50x zoom, camera flip, flashlight, front-light, and more. Understands image intent, responds quickly to follow-up questions, and supports custom quick commands—bringing AI-powered vision right to your fingertips.\n\n⚡ **Instant Utility Tools**  \nOffers real-time translation, polishing, and summarization. Supports 19 languages, 12 writing tones, 9 formatting styles, and 3 length options. Easily process long texts or web content—automated cleanup makes your workflow effortlessly smooth.\n\n🎛️ **Customizable Parameters**  \nTune core parameters like sampling temperature, max response length, and context depth. Set user background profiles, import/export chat histories—making advanced configurations simple and user-friendly."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🚀 **超多模型接入**  \n集成超100款大模型，覆盖通义千问、DeepSeek、智谱清言、字节豆包、OpenAI、Gemini、xAI等20家主流厂商，兼容博查AI、EXA AI、Tavily等搜索引擎，一站式满足多元智能需求，AI触手可及！\n\n💾 **本地模型支持**  \n支持本地加载GGUF模型，完美兼容LM Studio局域网模型配置，无需联网也能畅享AI服务，随时随地体验高效智能，全面开启本地大模型新时代。\n\n🧠 **智能协作新范式**  \n创新引入「群聊式对话」与「观察按钮」机制，支持多模型协同发言，融合AI专家智慧；内置提示词库可自定义，随取随用，打造高效便捷的智能工作流。\n\n🔗 **全场景交互**  \n支持文本、图像理解与联网搜索，兼容本地文件与图片上传，多模态协作无缝连接；集成地图、记忆、日历等工具，AI全面融入你的数字日常。\n\n🔍 **超级搜索系统**  \n融合多引擎搜索能力，自动优化提问上下文，支持中英文双语及图像提问，解析网页链接内容，构建个人知识库，助你高效跨越信息鸿沟。\n\n👀 **视觉智能中心**  \n独立图像处理界面，支持50倍变焦、相机翻转、手电筒、补光等功能，智能识别图片意图并快速响应，支持自定义快捷指令，解锁AI视觉全新体验。\n\n⚡ **即时即享工具**  \n提供翻译、润色、摘要等即用功能，支持19语言互译、12文风润色、9种格式规范、3类长度选择，网页与长文本也能秒速处理，解放你的双手。\n\n🎛️ **参数自定义调节**  \n支持采样温度、回复长度、上下文数量等核心参数配置，用户背景可设定，支持导出导入历史对话，让高级用户操作化繁为简、自由掌控。"
+          }
+        }
+      }
+    },
+    "core_features_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🌟 Overview of Core Features"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🌟 核心功能一览"
+          }
+        }
+      }
+    },
+    "HTML代码" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HTML Code"
+          }
+        }
+      }
+    },
+    "JSON文件 (.json)（多模态）" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "JSON File (.json) (Multimodal)"
+          }
+        }
+      }
+    },
+    "JSON文件 (.json)（文本）" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "JSON File (.json) (Only Text)"
+          }
+        }
+      }
+    },
+    "Knowledge" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Knowledge"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "知识"
+          }
+        }
+      }
+    },
+    "Message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ask any questions."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "询问任何问题"
+          }
+        }
+      }
+    },
+    "Models" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Models"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "模型"
+          }
+        }
+      }
+    },
+    "models_disabled_warning" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ Model list is unavailable. Please go to Settings - API Keys and enable the corresponding providers."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️模型列表不可用，请前往 设置 - 密钥 进行配置并启用对应厂商"
+          }
+        }
+      }
+    },
+    "no_api_keys_warning" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ You have not configured any API keys. Please go to Settings - API Keys to configure them."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️您还没有配置任何密钥，请前往 设置 - 密钥 进行配置"
+          }
+        }
+      }
+    },
+    "Python代码" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Python Code"
+          }
+        }
+      }
+    },
+    "reasoning_chain" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🧐 Reasoning Chain"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🧐 推理思维链"
+          }
+        }
+      }
+    },
+    "reference_materials" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "📚 Reference"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "📚 参考资料"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置"
+          }
+        }
+      }
+    },
+    "tooluse_content" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🔧 Tool Message"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🔧 工具消息"
+          }
+        }
+      }
+    },
+    "translate_block" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "📋 Translations"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "📋 译文内容"
+          }
+        }
+      }
+    },
+    "Unknown" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未知"
+          }
+        }
+      }
+    },
+    "Vision" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vision"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "视觉"
+          }
+        }
+      }
+    },
+    "vision_disabled_warning" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ Vision functionality is unavailable. Please go to Settings - API Keys and enable vision models."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️视觉功能不可用，请前往 设置 - 密钥 进行配置并开启视觉模型"
+          }
+        }
+      }
+    },
+    "voice_block" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🎤 Voice Message"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🎤 语音消息"
+          }
+        }
+      }
+    },
+    "上传 GGUF 文件以使用本地模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upload a GGUF file to use a local model"
+          }
+        }
+      }
+    },
+    "上传本地模型文件(.gguf)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upload local model file (.gguf)"
+          }
+        }
+      }
+    },
+    "下载源" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Download Source"
+          }
+        }
+      }
+    },
+    "不设置" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unsettled"
+          }
+        }
+      }
+    },
+    "个性化" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personalization"
+          }
+        }
+      }
+    },
+    "中英文双语检索" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bilingual Search (Chinese & English)"
+          }
+        }
+      }
+    },
+    "代码执行" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Code Execution"
+          }
+        }
+      }
+    },
+    "价格" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Price"
+          }
+        }
+      }
+    },
+    "优化模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Optimization Models"
+          }
+        }
+      }
+    },
+    "使用工具" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Using Tools"
+          }
+        }
+      }
+    },
+    "使用默认提示词" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use Default Prompt Words"
+          }
+        }
+      }
+    },
+    "保存" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
+        }
+      }
+    },
+    "保存图片" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save Image"
+          }
+        }
+      }
+    },
+    "保存失败" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save Failed"
+          }
+        }
+      }
+    },
+    "保存成功" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save Successful"
+          }
+        }
+      }
+    },
+    "保存翻译搭配" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save Translation Mappings"
+          }
+        }
+      }
+    },
+    "信息画布" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Information Canvas"
+          }
+        }
+      }
+    },
+    "做一段自我介绍吧！" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduce Yourself!"
+          }
+        }
+      }
+    },
+    "健康生活" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Healthy & Living"
+          }
+        }
+      }
+    },
+    "免费" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Free"
+          }
+        }
+      }
+    },
+    "全部复制" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy all"
+          }
+        }
+      }
+    },
+    "内容1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Content 1"
+          }
+        }
+      }
+    },
+    "内容2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Content 2"
+          }
+        }
+      }
+    },
+    "内容由AI模型“%@”生成" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Content generated by the AI “%@”."
+          }
+        }
+      }
+    },
+    "内容由代理“%@”生成" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Content generated by agent “%@”."
+          }
+        }
+      }
+    },
+    "内容长度" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Content Length"
+          }
+        }
+      }
+    },
+    "内容风格" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Content Styles"
+          }
+        }
+      }
+    },
+    "最大回复长度" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maximum Response Length"
+          }
+        }
+      }
+    },
+    "最大回复长度调节 (max_tokens)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maximum Response Length Adjustment (max_tokens)"
+          }
+        }
+      }
+    },
+    "写入健康应用" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Write to Health"
+          }
+        }
+      }
+    },
+    "写入营养摄入" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nutritional Intake"
+          }
+        }
+      }
+    },
+    "列表" : {
+
+    },
+    "创建信息画布" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create an Information Canvas"
+          }
+        }
+      }
+    },
+    "删除" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        }
+      }
+    },
+    "删除消息" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Message"
+          }
+        }
+      }
+    },
+    "删除知识" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Knowledge"
+          }
+        }
+      }
+    },
+    "删除译文" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Translation"
+          }
+        }
+      }
+    },
+    "删除资料" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Information"
+          }
+        }
+      }
+    },
+    "功能列表" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Function List"
+          }
+        }
+      }
+    },
+    "功能支持" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feature Support"
+          }
+        }
+      }
+    },
+    "匹配度阈值（范围：0.05 - 1.0）" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Match threshold (range: 0.05 - 1.0)"
+          }
+        }
+      }
+    },
+    "即时摘要" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Summary"
+          }
+        }
+      }
+    },
+    "即时润色" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refinement"
+          }
+        }
+      }
+    },
+    "即时翻译" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Translation"
+          }
+        }
+      }
+    },
+    "反向提示词" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reverse Prompts"
+          }
+        }
+      }
+    },
+    "发送邮件" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send Email"
+          }
+        }
+      }
+    },
+    "取消" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "取消置顶" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unpin"
+          }
+        }
+      }
+    },
+    "名称冲突" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name conflict"
+          }
+        }
+      }
+    },
+    "向量模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Embedding Models"
+          }
+        }
+      }
+    },
+    "向量模型将被用于知识背包文档索引的构建与知识背包查找功能，优秀的向量模型能带来精确、全面的查找效果，提高信息的召回率。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Embedding models power document indexing and search in the Knowledge Backpack, ensuring precise and comprehensive retrieval and improving information recall."
+          }
+        }
+      }
+    },
+    "启动视觉" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activate Vision"
+          }
+        }
+      }
+    },
+    "启用主动搜索" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable Active Search"
+          }
+        }
+      }
+    },
+    "启用主动翻找" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable Active Search"
+          }
+        }
+      }
+    },
+    "启用代码" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable Code"
+          }
+        }
+      }
+    },
+    "启用健康" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable Health"
+          }
+        }
+      }
+    },
+    "启用地图" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable Maps"
+          }
+        }
+      }
+    },
+    "启用天气" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable Weather"
+          }
+        }
+      }
+    },
+    "启用日历" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable Calendar"
+          }
+        }
+      }
+    },
+    "启用画布" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable Canvas"
+          }
+        }
+      }
+    },
+    "启用记忆功能" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable Memory Function"
+          }
+        }
+      }
+    },
+    "图像生成" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Image Generation"
+          }
+        }
+      }
+    },
+    "图像生成模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Image Generation Model"
+          }
+        }
+      }
+    },
+    "在提示词库中提前编辑好提示词，在群聊中快速应用，提升对话效率并保持聊天记录的简洁清晰。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit the prompts in advance in the prompt library, apply them quickly in group chats to enhance conversation efficiency and keep chat records concise and clear."
+          }
+        }
+      }
+    },
+    "地图引擎选择（最多只能开启一个）" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Map Engine Selection (max one)"
+          }
+        }
+      }
+    },
+    "地图规划" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Map & Planning"
+          }
+        }
+      }
+    },
+    "地点: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Location: %@"
+          }
+        }
+      }
+    },
+    "基于%@模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Based on the %@"
+          }
+        }
+      }
+    },
+    "基本信息" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Basic Information"
+          }
+        }
+      }
+    },
+    "基础模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Base Model"
+          }
+        }
+      }
+    },
+    "备注: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Note: %@"
+          }
+        }
+      }
+    },
+    "复制" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy"
+          }
+        }
+      }
+    },
+    "复制代码" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy code"
+          }
+        }
+      }
+    },
+    "复制内容" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy Content"
+          }
+        }
+      }
+    },
+    "复制图片" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy Image"
+          }
+        }
+      }
+    },
+    "复制智能体" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy Agent"
+          }
+        }
+      }
+    },
+    "复制链接" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy Link"
+          }
+        }
+      }
+    },
+    "天气服务商选择（最多只能开启一个）" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weather service provider selection (only one can be enabled)"
+          }
+        }
+      }
+    },
+    "天气查询" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weather Enquiry"
+          }
+        }
+      }
+    },
+    "如果您有任何问题或建议，可以通过邮件联系我们。此外，我们有一个微信社群，如果您感兴趣您可以邮件联系我，我将邀请您加入社群。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you have any questions or suggestions, please contact us by email. We also have a WeChat group — email us if you’d like to join.\n"
+          }
+        }
+      }
+    },
+    "存为知识" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save as Knowledge"
+          }
+        }
+      }
+    },
+    "存入知识背包" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save to Knowledge Backpack"
+          }
+        }
+      }
+    },
+    "学术论文检索" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Academic Paper Search"
+          }
+        }
+      }
+    },
+    "完成" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        }
+      }
+    },
+    "密钥" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API KEY"
+          }
+        }
+      }
+    },
+    "密钥设置" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API Key Settings"
+          }
+        }
+      }
+    },
+    "对选中内容提出修改意见…" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Propose revisions for the selected content…"
+          }
+        }
+      }
+    },
+    "导入聊天记录" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Import Chat History"
+          }
+        }
+      }
+    },
+    "导入聊天记录说明" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importing Chat History Instructions"
+          }
+        }
+      }
+    },
+    "导入错误" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Import Error"
+          }
+        }
+      }
+    },
+    "导出聊天记录" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Export Chat History"
+          }
+        }
+      }
+    },
+    "工具" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tools"
+          }
+        }
+      }
+    },
+    "已下载" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Downloaded"
+          }
+        }
+      }
+    },
+    "已复制" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copied"
+          }
+        }
+      }
+    },
+    "已成功构建向量" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Embeddings Ready"
+          }
+        }
+      }
+    },
+    "已经写入健康" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Written to Health"
+          }
+        }
+      }
+    },
+    "已经存入背包" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saved to Backpack"
+          }
+        }
+      }
+    },
+    "帮助" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Help"
+          }
+        }
+      }
+    },
+    "廉价 (≤0.001/千tokens)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cheap (≤¥0.001 / Ktokens)"
+          }
+        }
+      }
+    },
+    "建议进入其开放平台获取 API 密钥" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It is recommended to access its open platform to obtain the API key."
+          }
+        }
+      }
+    },
+    "建议进入其开放平台获取API密钥" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It is recommended to access its open platform to obtain the API key."
+          }
+        }
+      }
+    },
+    "开启智能生活的次世代AI工作台" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next-Gen AI Workbench for Smart Living"
+          }
+        }
+      }
+    },
+    "当前：" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Current:"
+          }
+        }
+      }
+    },
+    "当前未启用任何搜索引擎，请前往 设置-工具-搜索设置 中开启。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No search engine is currently enabled. Please go to Settings > Tools > Search Settings to enable one."
+          }
+        }
+      }
+    },
+    "忘记" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forget"
+          }
+        }
+      }
+    },
+    "快速下载本地模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quick Download Local Models"
+          }
+        }
+      }
+    },
+    "思考" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thinking"
+          }
+        }
+      }
+    },
+    "思考模式可控" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Controllable Thinking Mode"
+          }
+        }
+      }
+    },
+    "恢复默认排序" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore Default Sorting"
+          }
+        }
+      }
+    },
+    "您的优化模型已成功更新。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your optimization model has been successfully updated."
+          }
+        }
+      }
+    },
+    "您的优化模型更新失败！" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your optimization model update failed!"
+          }
+        }
+      }
+    },
+    "您的用户信息已成功更新。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your user information has been successfully updated."
+          }
+        }
+      }
+    },
+    "您的用户信息更新失败！" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your user information update failed!"
+          }
+        }
+      }
+    },
+    "感谢您使用 AI 翰林院" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thank You for Using AI 翰林院 Products"
+          }
+        }
+      }
+    },
+    "成本参考" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cost"
+          }
+        }
+      }
+    },
+    "打开应用的视觉页面" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open App’s Visual Page"
+          }
+        }
+      }
+    },
+    "打开链接" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Link"
+          }
+        }
+      }
+    },
+    "拍摄照片" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Take Photos"
+          }
+        }
+      }
+    },
+    "指引：点击下方“工具”中的“联网搜索”设置搜索引擎密钥和需要使用的搜索引擎" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guide: Click “Network Search” under “Tools” to set the search engine key and select the search engine to use."
+          }
+        }
+      }
+    },
+    "指引：点击下方“模型”中的“模型密钥”设置大模型密钥和厂商的启用状态" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guideline: Click on \"Model Key\" in the \"Model\" section below to set the large model key and enable the vendor status."
+          }
+        }
+      }
+    },
+    "推荐使用默认系统消息，AI翰林院专为群聊对话模式优化。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It is recommended to use the default system message, as AI Hanlin Academy is optimized for group chat dialogue mode."
+          }
+        }
+      }
+    },
+    "提示词库" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prompt Library"
+          }
+        }
+      }
+    },
+    "提示词设置" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prompt Settings"
+          }
+        }
+      }
+    },
+    "搜索引擎选择（最多只能开启一个）" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search engine selection (only one)"
+          }
+        }
+      }
+    },
+    "搜索提示词" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search Prompt"
+          }
+        }
+      }
+    },
+    "搜索时同时搜索中英文内容" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search Both Chinese and English Content"
+          }
+        }
+      }
+    },
+    "搜索智能体" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search Agent"
+          }
+        }
+      }
+    },
+    "搜索模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search Model"
+          }
+        }
+      }
+    },
+    "搜索知识文档" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search Knowledge Documents"
+          }
+        }
+      }
+    },
+    "搜索结果数量：%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Number of Search Results: %lld"
+          }
+        }
+      }
+    },
+    "搜索结果数量（范围：5-20）" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Number of Search Results (range: 5-20)"
+          }
+        }
+      }
+    },
+    "搜索聊天与消息内容" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search chat and message content"
+          }
+        }
+      }
+    },
+    "搜索记忆" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search Memory"
+          }
+        }
+      }
+    },
+    "摘要文本" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Summarized Text"
+          }
+        }
+      }
+    },
+    "撤销填写" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Undo Fill In"
+          }
+        }
+      }
+    },
+    "支持工具使用" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support Tool Usage"
+          }
+        }
+      }
+    },
+    "支持文本生成" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support Text Generation"
+          }
+        }
+      }
+    },
+    "支持深度思考" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support Deep Thinking"
+          }
+        }
+      }
+    },
+    "支持视觉理解" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support Visual Understanding"
+          }
+        }
+      }
+    },
+    "文件文本" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Document Text"
+          }
+        }
+      }
+    },
+    "文本" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Text"
+          }
+        }
+      }
+    },
+    "文本优化模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Text Optimization Model"
+          }
+        }
+      }
+    },
+    "文本优化模型将被广泛用于软件的提示词优化、文章内容优化、联网搜索提问优化、知识背包检索优化、图片生成提示词优化、自动生成群聊标题、自动生成智能体设定、翻译文本等功能上，优秀的文本优化模型能带来更好的产品体验。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Text optimization models are widely used for prompt & content optimization, online search enhancement, Knowledge Backpack retrieval, image-generation prompting, auto-generating group titles, agent creation, translation, and more. An excellent text-optimization model provides a better user experience."
+          }
+        }
+      }
+    },
+    "文本内容生成反馈" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Text Content Generation Feedback"
+          }
+        }
+      }
+    },
+    "文本模式" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Markdown"
+          }
+        }
+      }
+    },
+    "新增" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add"
+          }
+        }
+      }
+    },
+    "新增提醒事项" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add New Reminder"
+          }
+        }
+      }
+    },
+    "新增日历事件" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Calendar Events"
+          }
+        }
+      }
+    },
+    "方形画幅" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Square Format"
+          }
+        }
+      }
+    },
+    "无法开启厂商" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unable to Enable Vendor"
+          }
+        }
+      }
+    },
+    "日历提醒" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendar & Reminder"
+          }
+        }
+      }
+    },
+    "昂贵 (≥0.006/千tokens)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expensive (≥¥0.006 / Ktokens)"
+          }
+        }
+      }
+    },
+    "是否要删除所有聊天记录？删除后不可恢复。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you want to delete all chat history? Once deleted, it cannot be recovered."
+          }
+        }
+      }
+    },
+    "显示名称（自定义）" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Display Name (Custom)"
+          }
+        }
+      }
+    },
+    "显示设置" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Display Settings"
+          }
+        }
+      }
+    },
+    "智能体" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agent"
+          }
+        }
+      }
+    },
+    "智能体名称" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agent Name"
+          }
+        }
+      }
+    },
+    "智能体设定" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agent Settings"
+          }
+        }
+      }
+    },
+    "暂无消息" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Messages Yet"
+          }
+        }
+      }
+    },
+    "暂无翻译记录" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No translation record"
+          }
+        }
+      }
+    },
+    "更新" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update"
+          }
+        }
+      }
+    },
+    "更新时间：%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Updated: %@"
+          }
+        }
+      }
+    },
+    "更新说明" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update Notes"
+          }
+        }
+      }
+    },
+    "未启用搜索引擎" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Search Engine Enabled"
+          }
+        }
+      }
+    },
+    "未来天气预报" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Future Weather Forecast"
+          }
+        }
+      }
+    },
+    "本地" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Local"
+          }
+        }
+      }
+    },
+    "本地模型(Beta)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Local Models (Beta)"
+          }
+        }
+      }
+    },
+    "本地模型还属于测试阶段，暂不支持视觉功能等，输出也可能存在问题，将在后期修复优化。如果下载后需要删除，可以直接在模型列表进行删除，本地文件会随之一起删除。模型文件来自于魔塔社区或HuggingFace，本软件对模型输出结果不负有任何责任。请结合自己的设备性能合理下载，若超出设备承受能力，可能会出现闪退、卡死等现象。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The local model is still in the testing phase and does not currently support visual functions, and there may be issues with the output that will be fixed and optimized later. If you need to delete it after downloading, you can do so directly from the model list, and the local files will be deleted as well. The model files come from the Mo Tower community or Hugging Face, and this software assumes no responsibility for the output results of the models. Please download reasonably based on your device's performance; exceeding your device's capacity may result in crashes or freezes."
+          }
+        }
+      }
+    },
+    "本地运行" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Run Locally"
+          }
+        }
+      }
+    },
+    "本软件对生成结果不负有任何责任" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The software is not responsible for the generated results."
+          }
+        }
+      }
+    },
+    "构建以允许聊天召回" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Build for Chat Recall"
+          }
+        }
+      }
+    },
+    "查找提醒事项" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Find Reminders"
+          }
+        }
+      }
+    },
+    "查找日历事件" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Find Calendar Events"
+          }
+        }
+      }
+    },
+    "查看源码" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Source Code"
+          }
+        }
+      }
+    },
+    "查看资料" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Read Information"
+          }
+        }
+      }
+    },
+    "查询 API 余额" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check API Balance"
+          }
+        }
+      }
+    },
+    "查询实时天气" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check Real-time Weather"
+          }
+        }
+      }
+    },
+    "查询步数距离" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Query Step Distance"
+          }
+        }
+      }
+    },
+    "查询能量消耗" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Query Energy Consumption"
+          }
+        }
+      }
+    },
+    "查询营养摄入" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enquire Nutritional Intake"
+          }
+        }
+      }
+    },
+    "标题" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Title"
+          }
+        }
+      }
+    },
+    "格式规范" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formatting Standards"
+          }
+        }
+      }
+    },
+    "模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Models"
+          }
+        }
+      }
+    },
+    "模型厂商" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Model Vendors"
+          }
+        }
+      }
+    },
+    "模型名称" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Model Name"
+          }
+        }
+      }
+    },
+    "模型名称已存在，请修改名称后重试。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The model name already exists, please modify the name and try again."
+          }
+        }
+      }
+    },
+    "模型在需要时主动搜索" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Models actively search when needed"
+          }
+        }
+      }
+    },
+    "模型在需要时主动翻找知识背包" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The model actively searches through its knowledge base when needed."
+          }
+        }
+      }
+    },
+    "模型密钥" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Model Keys"
+          }
+        }
+      }
+    },
+    "模型应该怎么称呼你？" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How Should Models Address You?"
+          }
+        }
+      }
+    },
+    "模型选择" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Model Selection"
+          }
+        }
+      }
+    },
+    "模型需要注意什么？" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What Should Be Noted About Models?"
+          }
+        }
+      }
+    },
+    "横向画幅" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Horizontal format"
+          }
+        }
+      }
+    },
+    "正在加载..." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading..."
+          }
+        }
+      }
+    },
+    "正在填写" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filling in…"
+          }
+        }
+      }
+    },
+    "正在翻译" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Translating..."
+          }
+        }
+      }
+    },
+    "正在请求" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Requesting..."
+          }
+        }
+      }
+    },
+    "此操作会清空当前画布内容，无法撤销。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This operation will clear the current canvas content and cannot be undone."
+          }
+        }
+      }
+    },
+    "注意：用户信息的设置会让模型的回复更符合你的习惯，但是会消耗更多的tokens。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Note: Setting user information will make model responses more tailored to your preferences but will consume more tokens."
+          }
+        }
+      }
+    },
+    "测试 API" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Test API"
+          }
+        }
+      }
+    },
+    "测试失败" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Test Failed"
+          }
+        }
+      }
+    },
+    "测试通过" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Test Passed"
+          }
+        }
+      }
+    },
+    "消息" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Message"
+          }
+        }
+      }
+    },
+    "消息数量上限" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Message Quantity Limit"
+          }
+        }
+      }
+    },
+    "润色文本" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refine Text"
+          }
+        }
+      }
+    },
+    "润色要求" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refinement Requirements"
+          }
+        }
+      }
+    },
+    "深度思考" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deep Thinking"
+          }
+        }
+      }
+    },
+    "添加在线模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Online Model"
+          }
+        }
+      }
+    },
+    "添加新智能体" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add New Agent"
+          }
+        }
+      }
+    },
+    "添加智能体" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add New Agent"
+          }
+        }
+      }
+    },
+    "添加本地模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Local Models"
+          }
+        }
+      }
+    },
+    "清空" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear All"
+          }
+        }
+      }
+    },
+    "清空所有" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear All"
+          }
+        }
+      }
+    },
+    "清空聊天记录" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear Chat History"
+          }
+        }
+      }
+    },
+    "清除" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear"
+          }
+        }
+      }
+    },
+    "温馨提示：即时功能不会保存你的数据，重要数据请及时备份！" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reminder: Instant features do not save your data. Please back up important information in time!"
+          }
+        }
+      }
+    },
+    "渲染画布网页" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Render Canvas Webpage"
+          }
+        }
+      }
+    },
+    "渲染网页内容" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Render Web Content"
+          }
+        }
+      }
+    },
+    "灌输新记忆" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instill New Memories"
+          }
+        }
+      }
+    },
+    "点击右下角“画布”按钮以查看和编辑内容" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Click the \"Canvas\" button at the bottom right to view and edit content."
+          }
+        }
+      }
+    },
+    "点击名称或钥匙设置厂商密钥并打开该厂商以使用该厂商的模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap a vendor name or key to set its API key and enable its model."
+          }
+        }
+      }
+    },
+    "版本：%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version: %@"
+          }
+        }
+      }
+    },
+    "特别要求" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Special Requests"
+          }
+        }
+      }
+    },
+    "特定位置搜索" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Specific Location Search"
+          }
+        }
+      }
+    },
+    "现有文本" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Existing Text"
+          }
+        }
+      }
+    },
+    "现有文本或网页链接" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Existing Text or Web Links"
+          }
+        }
+      }
+    },
+    "生图" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generate Image"
+          }
+        }
+      }
+    },
+    "生成语音" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generate Speech"
+          }
+        }
+      }
+    },
+    "用户信息" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "User Information"
+          }
+        }
+      }
+    },
+    "用户定位查询" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "User Location Search"
+          }
+        }
+      }
+    },
+    "由 %@ 提供润色" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refinement Provided by %@"
+          }
+        }
+      }
+    },
+    "由 %@ 提供翻译" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Translation Provided by %@"
+          }
+        }
+      }
+    },
+    "由 %@ 进行摘要" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Summarized by %@"
+          }
+        }
+      }
+    },
+    "由于需要拷贝模型文件，上传后根据上传的模型大小，等待一段时间后才会在数据库中看见上传的本地模型。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Due to the need to copy model files, after uploading, you will see the uploaded local model in the database only after waiting for a while based on the size of the uploaded model."
+          }
+        }
+      }
+    },
+    "画布 %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Canvas %@"
+          }
+        }
+      }
+    },
+    "百位AI翰林待诏候旨，作为智能时代的掌玺者，您将在21世纪最澎湃的算力浪潮中，见证思维内阁呈递的万方策论。而你，21世纪最富期待的科技革命的亲历者，AI翰林院诚邀您检阅百模智囊团，在史无前例的认知盛宴中，谱写您那属于数字时代的新华章！" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A hundred AI scholars stand by, awaiting your command. As the keeper of the imperial seal in the era of intelligence, you will witness the grand strategies presented by the Cabinet of Thought amidst the most surging tide of computational power in the 21st century. And you, the most eagerly anticipated pioneer of this century’s technological revolution, are cordially invited by the AI Academy to review the wisdom of a hundred models. In this unprecedented cognitive feast, let us compose a new chapter that belongs to you in the digital age!"
+          }
+        }
+      }
+    },
+    "相册选择" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Camera Selection"
+          }
+        }
+      }
+    },
+    "知识库" : {
+
+    },
+    "知识文档撰写" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Knowledge Document Creation"
+          }
+        }
+      }
+    },
+    "知识背包" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Knowledge Backpack"
+          }
+        }
+      }
+    },
+    "知识背包翻找" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Knowledge Backpack Search"
+          }
+        }
+      }
+    },
+    "知识背包错误" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Knowledge Backpack Error"
+          }
+        }
+      }
+    },
+    "确定" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirm"
+          }
+        }
+      }
+    },
+    "确定要删除吗？删除后不可恢复！" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure you want to delete it? This action cannot be undone."
+          }
+        }
+      }
+    },
+    "确定要删除此模型吗？" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are You Sure You Want to Delete This Model?"
+          }
+        }
+      }
+    },
+    "确定要清除所有记忆吗？" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure you want to clear all memories?"
+          }
+        }
+      }
+    },
+    "确认删除？" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirm Deletion?"
+          }
+        }
+      }
+    },
+    "确认删除画布内容？" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirm deletion of canvas content?"
+          }
+        }
+      }
+    },
+    "确认清空所有文本？" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirm Clearing All Text?"
+          }
+        }
+      }
+    },
+    "确认清空聊天记录" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirm Clearing Chat History"
+          }
+        }
+      }
+    },
+    "视觉" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vision"
+          }
+        }
+      }
+    },
+    "视觉优化模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visual Optimization Model"
+          }
+        }
+      }
+    },
+    "视觉优化模型将被广泛用于软件的联网搜索提问优化、知识背包检索优化、图片生成提示词优化、OCR扫描文本、文本及推理模型分析图片等功能上，优秀的视觉优化模型能带来更好的产品体验。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visual optimization models are widely used for online search query optimization, Knowledge Backpack retrieval, image-generation prompts, OCR text scanning, and image analysis with text & reasoning. High-quality visual optimization models deliver a superior user experience."
+          }
+        }
+      }
+    },
+    "禁用工具" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disable Tools"
+          }
+        }
+      }
+    },
+    "科学模式" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latex"
+          }
+        }
+      }
+    },
+    "程序源码" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Source Code"
+          }
+        }
+      }
+    },
+    "程序运行结果" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Program Results"
+          }
+        }
+      }
+    },
+    "系统名称（用于API请求，参考官方API）" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "System Name (For API Requests, Refer to Official API)"
+          }
+        }
+      }
+    },
+    "系统消息设置" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "System Message Settings"
+          }
+        }
+      }
+    },
+    "约 %lld tokens" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Approx. %lld tokens"
+          }
+        }
+      }
+    },
+    "纯文本" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plain Text"
+          }
+        }
+      }
+    },
+    "纯文本 (.txt)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plain Text (.txt)"
+          }
+        }
+      }
+    },
+    "纵向画幅" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vertical"
+          }
+        }
+      }
+    },
+    "累积概率参数调节 (top_p)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cumulative Probability Adjustment (top_p)"
+          }
+        }
+      }
+    },
+    "继续" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        }
+      }
+    },
+    "编辑" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit"
+          }
+        }
+      }
+    },
+    "编辑 System 角色消息" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit System Role Message"
+          }
+        }
+      }
+    },
+    "编辑内容" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Content"
+          }
+        }
+      }
+    },
+    "编辑图标" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Icon"
+          }
+        }
+      }
+    },
+    "编辑基础模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit the Basic Model"
+          }
+        }
+      }
+    },
+    "编辑密钥" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit API Key"
+          }
+        }
+      }
+    },
+    "编辑智能体" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Agent"
+          }
+        }
+      }
+    },
+    "编辑智能体名称" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Agent Name"
+          }
+        }
+      }
+    },
+    "编辑智能体描述" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Agent Description"
+          }
+        }
+      }
+    },
+    "编辑智能体设定" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Agent Character"
+          }
+        }
+      }
+    },
+    "编辑标题" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Title"
+          }
+        }
+      }
+    },
+    "编辑模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Model"
+          }
+        }
+      }
+    },
+    "编辑模型名称" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Model Name"
+          }
+        }
+      }
+    },
+    "编辑画布内容" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Canvas Contents"
+          }
+        }
+      }
+    },
+    "编辑翻译" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Translation"
+          }
+        }
+      }
+    },
+    "编辑翻译词汇" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Translation"
+          }
+        }
+      }
+    },
+    "编辑聊天记录" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Chat History"
+          }
+        }
+      }
+    },
+    "网络文件阅读" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Online Document Reading"
+          }
+        }
+      }
+    },
+    "网页信息阅读" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Web Content Reading"
+          }
+        }
+      }
+    },
+    "网页地址" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Web URL"
+          }
+        }
+      }
+    },
+    "置顶消息" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pin Message"
+          }
+        }
+      }
+    },
+    "置顶知识" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pin Knowledge"
+          }
+        }
+      }
+    },
+    "翻找结果数量：%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Number of Search Results: %lld"
+          }
+        }
+      }
+    },
+    "翻找结果数量（范围：5-20）" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Number of Search Results (range: 5-20)"
+          }
+        }
+      }
+    },
+    "翻译中..." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Translating..."
+          }
+        }
+      }
+    },
+    "翻译内容" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Translation Content"
+          }
+        }
+      }
+    },
+    "翻译操作失败" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Translation Failed"
+          }
+        }
+      }
+    },
+    "翻译词典" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Translation Dictionary"
+          }
+        }
+      }
+    },
+    "聊天记录管理" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chat Record Management"
+          }
+        }
+      }
+    },
+    "联系我们" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contact Us"
+          }
+        }
+      }
+    },
+    "联网信息检索" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Network Information Retrieval"
+          }
+        }
+      }
+    },
+    "联网搜索" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Network Search"
+          }
+        }
+      }
+    },
+    "自动填写" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autofill"
+          }
+        }
+      }
+    },
+    "自动路线规划" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatic Route Planning"
+          }
+        }
+      }
+    },
+    "自定义" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Customization"
+          }
+        }
+      }
+    },
+    "自定义系统消息" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom System Message"
+          }
+        }
+      }
+    },
+    "自定义翻译词典将使得“即时翻译”的翻译结果变得更加个性化，特别是对于某些私有化的翻译知识而言，在翻译词典中添加搭配能最快速的优化你的翻译结果。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setting up a translation dictionary will make the results of \"instant translation\" more personalized, especially for certain proprietary translation knowledge. Adding collocations to the translation dictionary can quickly optimize your translation results."
+          }
+        }
+      }
+    },
+    "营养卡片" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nutrition Card"
+          }
+        }
+      }
+    },
+    "要求描述..." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Request Description…"
+          }
+        }
+      }
+    },
+    "规划执行" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Planning"
+          }
+        }
+      }
+    },
+    "触感反馈" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haptic Feedback"
+          }
+        }
+      }
+    },
+    "记忆功能已关闭" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memory function has been disabled."
+          }
+        }
+      }
+    },
+    "记忆档案" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memory Archive"
+          }
+        }
+      }
+    },
+    "记忆档案功能用于聊天，受支持的模型会自动在聊天时记住你的喜好并在需要的时候主动回忆这些喜好。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Memory Archive feature works in chat: supported models will automatically remember your preferences during conversations and proactively recall them when needed."
+          }
+        }
+      }
+    },
+    "记忆编辑" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memory Editing"
+          }
+        }
+      }
+    },
+    "设定个性化内容，使得模型在对话时了解你的需求与偏好，更好的进行回复。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set personalized content so that the model understands your needs and preferences during conversations, allowing for better responses."
+          }
+        }
+      }
+    },
+    "设置" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "设置 %@ API 密钥，以开启该天气服务" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set the %@ API key to enable this weather service."
+          }
+        }
+      }
+    },
+    "设置 %@ API密钥，以启用该厂商的模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set the %@ API key to enable the vendor's model."
+          }
+        }
+      }
+    },
+    "设置 %@ API密钥，以开启该地图引擎" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set the %@ API key to enable this map engine."
+          }
+        }
+      }
+    },
+    "设置 %@ API密钥，以开启该搜索引擎" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set the %@ API key to enable this search engine."
+          }
+        }
+      }
+    },
+    "设置代码功能，以便在与支持工具的模型对话时，模型为你运行Python代码，或查看模型为你制作网页内容，并与其交互。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable the code function to allow supported models to run Python code or generate web content during conversations."
+          }
+        }
+      }
+    },
+    "设置健康功能，以便在与支持工具的模型对话时，模型能够获取你的健康信息或帮你记录健康、饮食等信息。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable health functions so supported models can access or record your health and dietary information."
+          }
+        }
+      }
+    },
+    "设置地图功能，以便在与支持工具的模型对话时，更好的获取位置相关的信息并让模型向你展示地图" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable the map function to allow the model to access location-related information and display maps during conversations."
+          }
+        }
+      }
+    },
+    "设置天气功能，以便在与支持工具的模型对话时，获取实时天气信息和未来天气预报" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable the weather feature to obtain real-time weather information and future forecasts when conversing with models that support this tool."
+          }
+        }
+      }
+    },
+    "设置搜索功能，以便在聊天对话时获取互联网内容，提升回答效果。个性化的设置能最大程度的平衡你的需求与检索带来的成本消耗" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable the search function to allow models to fetch internet content during chats, improving response quality; personalized settings balance your needs and retrieval costs."
+          }
+        }
+      }
+    },
+    "设置日历功能，以便在与支持工具的模型对话时，获取日历日程、提醒事项信息或者让模型写入日历日程、提醒事项" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable calendar functions to let supported models retrieve schedules and reminders or add events to your calendar."
+          }
+        }
+      }
+    },
+    "设置画布功能，以便在与支持工具的模型对话时，模型能够使用画布工具，带来更好的长文本、大段落或结构化内容的输出编辑体验。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable canvas function so that when interacting with models that support tools, the model can use the canvas tool to provide a better editing experience for long texts, large paragraphs, or structured content output."
+          }
+        }
+      }
+    },
+    "设置知识功能，以便在聊天对话时翻找知识背包，获取私有知识库内容，提升回答效果。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable the knowledge function to let models search your knowledge backpack for private content during chats, enhancing response effectiveness."
+          }
+        }
+      }
+    },
+    "设置系统消息" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set System Message"
+          }
+        }
+      }
+    },
+    "该厂商暂未支持" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not Supported"
+          }
+        }
+      }
+    },
+    "语言设置" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Language Settings"
+          }
+        }
+      }
+    },
+    "语音" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speech"
+          }
+        }
+      }
+    },
+    "语音模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speech Model"
+          }
+        }
+      }
+    },
+    "语音模型将用于合成语音。选择 Siri 模型可使用本地合成，而选择大模型合成将通过 API 请求生成语音，后者需要配置有效的 API Key。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speech models will be used to synthesize speech. Selecting the Siri model will use native synthesis, while selecting Large Model Synthesis will generate speech via API requests, the latter requiring a valid API Key to be configured."
+          }
+        }
+      }
+    },
+    "语音生成" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speech Generation"
+          }
+        }
+      }
+    },
+    "语音由%@生成" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generated by %@"
+          }
+        }
+      }
+    },
+    "说明" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Note"
+          }
+        }
+      }
+    },
+    "说明：消息数量上限用于控制传入的对话数量，其作用在于合理控制上下文长度，避免因消息过多导致系统处理复杂、资源消耗大以及用户体验受影响等问题，默认值为 20。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Note: The message limit is used to control the number of incoming conversations, aiming to reasonably manage context length and avoid issues such as complex system processing, high resource consumption, and negative impacts on user experience due to excessive messages. The default value is 20."
+          }
+        }
+      }
+    },
+    "说明：用于控制模型生成的回复中最多包含多少个词元（tokens）。通过设置 max_tokens，可以限制生成文本的长度，确保其符合预期的长度要求。默认为不设置。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Description: Used to control how many word elements (tokens) are included in the maximum number of responses generated by the model. By setting max_tokens, you can limit the length of the generated text to ensure it meets the expected length requirements. The default is not set."
+          }
+        }
+      }
+    },
+    "说明：累积概率控制选择的词汇范围，较低时限制了生成的多样性，较高时生成的文本更加开放和多样。默认为不设置。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Description: cumulative probability controls the range of words selected, lower limits the diversity of generation, higher generates more open and diverse text. The default is not set."
+          }
+        }
+      }
+    },
+    "说明：采样温度参数影响模型的创造性和稳定性：温度越高，生成内容更有创意但易出错；温度越低，回答更保守稳定。默认为不设置。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Description: the sampling temperature parameter affects the creativity and stability of the model: the higher the temperature, the more creative but error-prone the generated content; the lower the temperature, the more conservative and stable the answers. The default is not set."
+          }
+        }
+      }
+    },
+    "请提供 JSON 文件，格式要求与本软件导出的 JSON 文件格式一致，本软件采用 OpenAI 的请求 JSON 格式，包括文本对话和含图片的多模态对话，图片使用 base64 数据。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please provide a JSON file that matches the format exported by this software: OpenAI’s request JSON format, including text dialogues and multimodal dialogues with images encoded in base64.\n"
+          }
+        }
+      }
+    },
+    "请求地址" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Request Address"
+          }
+        }
+      }
+    },
+    "请求地址（URL）" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Request URLs"
+          }
+        }
+      }
+    },
+    "请输入 API Host" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter the API Host"
+          }
+        }
+      }
+    },
+    "请输入 API Key" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter the API key"
+          }
+        }
+      }
+    },
+    "请输入你的昵称" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter your nickname"
+          }
+        }
+      }
+    },
+    "请输入密钥" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter the API key"
+          }
+        }
+      }
+    },
+    "请输入新的标题" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter a new title"
+          }
+        }
+      }
+    },
+    "请输入标题" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter the title"
+          }
+        }
+      }
+    },
+    "请输入模型名称" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter the model name"
+          }
+        }
+      }
+    },
+    "请输入知识名称" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter the name for the knowledge"
+          }
+        }
+      }
+    },
+    "请输入网页 URL" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter the webpage URL"
+          }
+        }
+      }
+    },
+    "请输入群聊名称" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter the group chat name"
+          }
+        }
+      }
+    },
+    "请输入请求地址" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter the request URLs"
+          }
+        }
+      }
+    },
+    "调整模型参数" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adjust Model Parameters"
+          }
+        }
+      }
+    },
+    "调整累积概率" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adjust Cumulative Probability"
+          }
+        }
+      }
+    },
+    "调整采样温度" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adjust Sampling Temperature"
+          }
+        }
+      }
+    },
+    "资料内容" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Information Content"
+          }
+        }
+      }
+    },
+    "身份选择" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Identity Selection"
+          }
+        }
+      }
+    },
+    "软件" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Software"
+          }
+        }
+      }
+    },
+    "软件介绍" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Software Introduction"
+          }
+        }
+      }
+    },
+    "软件信息" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Software Information"
+          }
+        }
+      }
+    },
+    "软件含有AI生成信息，请注意鉴别" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This software contains AI-generated content; please verify its authenticity."
+          }
+        }
+      }
+    },
+    "软件指南" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Software Guide"
+          }
+        }
+      }
+    },
+    "输入名称" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter the name here"
+          }
+        }
+      }
+    },
+    "输入工具" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Input Tools"
+          }
+        }
+      }
+    },
+    "输入翻译词汇" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Input Translation Dictionary"
+          }
+        }
+      }
+    },
+    "运行画布代码" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Run Canvas Codes"
+          }
+        }
+      }
+    },
+    "运行程序代码" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Run Program Codes"
+          }
+        }
+      }
+    },
+    "这是一段示例消息内容..." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is a Sample Message..."
+          }
+        }
+      }
+    },
+    "这里设定的 System 角色的消息在大模型中起着至关重要的作用，通常用于设定对话的上下文、风格、身份与行为边界，是构建高质量对话系统的关键机制之一。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The messages of the System role set here play a crucial role in the large model, typically used to establish the context, style, identity, and behavioral boundaries of the conversation. It is one of the key mechanisms for building high-quality dialogue systems."
+          }
+        }
+      }
+    },
+    "退出编辑模式" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exit Edit Mode"
+          }
+        }
+      }
+    },
+    "适中 (0.001-0.006/千tokens)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moderate (¥0.001–¥0.006 / Ktokens)"
+          }
+        }
+      }
+    },
+    "选择OCR的图片来源" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select OCR Image Source"
+          }
+        }
+      }
+    },
+    "选择向量模型（仅启用一个）" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select an Embedding Model"
+          }
+        }
+      }
+    },
+    "选择图标" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select the Icon"
+          }
+        }
+      }
+    },
+    "选择基础模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select the Base Model"
+          }
+        }
+      }
+    },
+    "选择导出格式" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select Export Format"
+          }
+        }
+      }
+    },
+    "选择文本" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select Text"
+          }
+        }
+      }
+    },
+    "选择文本优化模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select a Text Optimization Model"
+          }
+        }
+      }
+    },
+    "选择视觉优化模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select a Visual Optimization Model"
+          }
+        }
+      }
+    },
+    "选择系统提示词" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select System Prompts"
+          }
+        }
+      }
+    },
+    "选择语音模型（仅启用一个）" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select a Speech Model"
+          }
+        }
+      }
+    },
+    "通用" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General"
+          }
+        }
+      }
+    },
+    "通过选择新的基础模型复制该智能体" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "By selecting a new base model to replicate the agent."
+          }
+        }
+      }
+    },
+    "邮箱已复制到剪贴板" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The email has been copied to the clipboard."
+          }
+        }
+      }
+    },
+    "采样温度参数调节 (temperature)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sampling temperature parameter adjustment (temperature)"
+          }
+        }
+      }
+    },
+    "重新请求" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Request Again"
+          }
+        }
+      }
+    },
+    "链接包含未知信息\n打开链接将离开AI翰林院" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The link contains unknown information. Opening it will take you away from AI Hanlin."
+          }
+        }
+      }
+    },
+    "错误" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error"
+          }
+        }
+      }
+    },
+    "附近兴趣搜索" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nearby Interests Search"
+          }
+        }
+      }
+    },
+    "音频" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voice"
+          }
+        }
+      }
+    },
+    "默认" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Default"
+          }
+        }
+      }
+    },
+    "默认系统消息" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Default System Message"
+          }
+        }
+      }
+    },
+    "默认隐藏智能体" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Default Hidden Agent"
+          }
+        }
+      }
+    },
+    "默认隐藏模型" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Default Hidden Model"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
