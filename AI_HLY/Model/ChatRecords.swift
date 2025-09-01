@@ -62,7 +62,7 @@ class ChatRecords {
         systemMessage: String? = "",
         useSystemMessage: Bool = true,
         canvas: CanvasData? = nil,
-        messages: [ChatMessages]? = nil,
+        messages: [ChatMessages]? = nil
     ) {
         self.id = id
         self.name = name

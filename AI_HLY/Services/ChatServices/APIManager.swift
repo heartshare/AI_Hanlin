@@ -1386,7 +1386,7 @@ class APIManager {
                                    maxTokens: Int,
                                    selectedPromptsContent: [String]?,
                                    systemMessage: String,
-                                   isObservation: Bool,
+                                   isObservation: Bool
     ) async throws -> AsyncThrowingStream<StreamData, Error> {
         
         return AsyncThrowingStream<StreamData, Error> { continuation in
@@ -1457,7 +1457,7 @@ class APIManager {
                         history: chats,
                         topP: Float(topp),
                         temp: Float(tem),
-                        maxTokenCount: Int32(maxtokens),
+                        maxTokenCount: Int32(maxtokens)
                     ) else {
                         throw NSError(domain: "LocalLLMInit", code: -1, userInfo: [NSLocalizedDescriptionKey: "本地 LLM 初始化失败"])
                     }
@@ -2410,7 +2410,7 @@ class APIManager {
                             codeEnabled: codeEnabled,
                             healthEnabled: healthEnabled,
                             weatherEnabled: weatherEnabled,
-                            canvasEnabled: canvasEnabled,
+                            canvasEnabled: canvasEnabled
                         )
                         // 获得工具
                         requestBody["tools"] = tools
@@ -3703,7 +3703,7 @@ class APIManager {
                                             splitMarkers: splitMarkerGroup(
                                                 groupID: groupID, modelName: modelInfo.name ?? "Unknown", modelDisplayName: modelInfo.displayName ?? "Unknown"
                                             ),
-                                            canvas_info: self.canvasInfo,
+                                            canvas_info: self.canvasInfo
                                         )
                                     )
                                     

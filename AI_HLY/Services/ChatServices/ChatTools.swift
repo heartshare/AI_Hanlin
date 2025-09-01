@@ -24,7 +24,7 @@ func buildMemoryTools(
     codeEnabled: Bool = true,
     healthEnabled: Bool = true,
     weatherEnabled: Bool = true,
-    canvasEnabled: Bool = true,
+    canvasEnabled: Bool = true
 ) -> [[String: Any]] {
     let zh = (Locale.preferredLanguages.first ?? "zh").hasPrefix("zh")
     var tools: [[String: Any]] = []

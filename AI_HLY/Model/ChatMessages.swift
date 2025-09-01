@@ -224,7 +224,7 @@ class ChatMessages {
         groupID: UUID = UUID(),
         timestamp: Date = Date(),
         record: ChatRecords? = nil,
-        routeInfos: [RouteInfo]? = nil,
+        routeInfos: [RouteInfo]? = nil
     ) {
         self.id = id
         self.role = role

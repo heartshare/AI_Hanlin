@@ -523,7 +523,7 @@ struct SearchSettingView: View {
             let newUser = UserInfo(
                 bilingualSearch: bilingualSearch,
                 useSearch: searchEnable,
-                searchCount: searchCount,
+                searchCount: searchCount
             )
             modelContext.insert(newUser)
         }
@@ -918,7 +918,7 @@ struct MapSettingView: View {
             existingUser.useMap = mapEnable
         } else {
             let newUser = UserInfo(
-                useMap: mapEnable,
+                useMap: mapEnable
             )
             modelContext.insert(newUser)
         }
@@ -1110,7 +1110,7 @@ struct CalendarSettingView: View {
             existingUser.useCalendar = calendarEnable
         } else {
             let newUser = UserInfo(
-                useCalendar: calendarEnable,
+                useCalendar: calendarEnable
             )
             modelContext.insert(newUser)
         }
@@ -1184,7 +1184,7 @@ struct CodeSettingView: View {
             existingUser.useCode = CodeEnable
         } else {
             let newUser = UserInfo(
-                useCode: CodeEnable,
+                useCode: CodeEnable
             )
             modelContext.insert(newUser)
         }
@@ -1260,7 +1260,7 @@ struct HealthSettingView: View {
             existingUser.useHealth = healthEnable
         } else {
             let newUser = UserInfo(
-                useHealth: healthEnable,
+                useHealth: healthEnable
             )
             modelContext.insert(newUser)
         }
@@ -1336,7 +1336,7 @@ struct CanvasSettingView: View {
             existingUser.useCanvas = canvasEnable
         } else {
             let newUser = UserInfo(
-                useCanvas: canvasEnable,
+                useCanvas: canvasEnable
             )
             modelContext.insert(newUser)
         }

@@ -36,7 +36,7 @@ class CanvasServices {
             saved: false,
             id: nil,
             history: [content],
-            index: 0,
+            index: 0
         )
     }
     

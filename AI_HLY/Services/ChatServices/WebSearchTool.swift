@@ -50,7 +50,7 @@ func searchZhipu(
     query: String,
     apiKey: String?,
     requestURL: String,
-    searchCount: Int,
+    searchCount: Int
 ) async throws -> (ParsedSearchResult, String) {
     guard let apiKey = apiKey, let url = URL(string: requestURL) else {
         throw URLError(.badURL)

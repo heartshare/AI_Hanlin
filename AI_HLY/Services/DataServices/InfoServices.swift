@@ -796,7 +796,7 @@ func getKeyList() -> [APIKeys] {
             name: "ANTHROPIC_API_KEY",
             company: "ANTHROPIC",
             key: "",
-            requestURL: "https://api.anthropic.com/v1/chat/completions",
+            requestURL: "https://api.anthropic.com/v1/chat/completions"
         ),
         APIKeys(
             name: "YI_API_KEY",
